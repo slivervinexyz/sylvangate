@@ -5,7 +5,9 @@
  */
 import { resolveGateAddressForChain } from "../config/contract-deployments";
 import { GMX_UI_FEE_BPS } from "../config/gmx-revenue";
-import { SESSION_KEY_NOTIONAL_CAP_USD } from "../services/session-key-adapter-lib/session-key-types";
+
+/** Hard USD notional cap for session-key authorization (R07). */
+export const SESSION_KEY_NOTIONAL_CAP_USD = 5_000;
 
 /** ExoMesh Gate EIP-712 domain (42161 + 421614 redeploy). */
 export const GATE_EIP712_DOMAIN_EXOMESH_WIRE = "SliverVineExoMesh" as const;
@@ -43,9 +45,6 @@ export const SLIVERVINE_GATE_MAINNET_ADDRESS = resolveGateAddressForChain(
 
 /** Default EIP-712 verifyingContract (Arbitrum One production anchor). */
 export const SLIVERVINE_GATE_ADDRESS = SLIVERVINE_GATE_MAINNET_ADDRESS;
-
-/** Hard USD notional cap for session-key authorization (R07). SSOT: `session-key-types.ts`. */
-export { SESSION_KEY_NOTIONAL_CAP_USD };
 
 /** GMX v2 ExchangeRouter native builder fee — SSOT: +10 bps (`gmx-revenue.ts`). */
 export { GMX_UI_FEE_BPS };

@@ -1,4 +1,4 @@
-import { RiskLimitExceeded } from "../../../services/risk-control";
+import { RiskLimitExceeded } from "../../../core/errors";
 import {
   BUNDLER_TIMEOUT_FAIL_CLOSED,
   ZERODEV_BUNDLER_FAIL_CLOSED_TIMEOUT_MS,

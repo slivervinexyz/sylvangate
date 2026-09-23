@@ -14,16 +14,26 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "verbatimModuleSyntax": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@slivervine/exomesh-agentic-wallet-guard": [
-        "./src/sdk/exomesh-agentic-wallet-guard/index.ts"
-      ]
-    }
+    "resolveJsonModule": true
   },
   "include": [
-    "src/**/*.ts",
-    "apps/**/*.ts",
+    "src/adapters/across-ingress-bridge.ts",
+    "src/adapters/across-ingress-bridge-types.ts",
+    "src/adapters/types.ts",
+    "src/adapters/robinhood/**/*.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-constants.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-kernel.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-bundler.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-chain.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-types.ts",
+    "src/config/gmx-markets.ts",
+    "src/config/gmx-revenue.ts",
+    "src/config/contract-deployments.ts",
+    "src/sdk/constants.ts",
+    "src/sdk/unidirectional-bridge.ts",
+    "src/sdk/robinhood-audit-snapshot.ts",
+    "src/core/errors.ts",
+    "src/core/risk-log-types.ts"
   ],
   "exclude": ["node_modules", "dist", "tests", "vitest.config.ts"]
 }
