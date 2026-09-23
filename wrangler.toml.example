@@ -1,0 +1,8 @@
+# DEPRECATED — copy to wrangler.toml is no longer required.
+# Committed SSOT: ./wrangler.toml (name = bedelta-living-water → bedeltawater.slivervine.xyz)
+# Local secrets SSOT: .env.production (gitignored)
+#
+# This file is retained only as a historical pointer for operators.
+
+name = "bedelta-living-water"
+# See wrangler.toml for the live Worker configuration.

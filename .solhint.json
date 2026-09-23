@@ -1,0 +1,17 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "compiler-version": "off",
+    "func-visibility": ["warn", { "ignoreConstructors": true }],
+    "not-rely-on-time": "off",
+    "no-empty-blocks": "off",
+    "code-complexity": "off",
+    "use-natspec": "off",
+    "gas-small-strings": "off",
+    "gas-strict-inequalities": "off",
+    "gas-indexed-events": "off",
+    "immutable-vars-naming": "off",
+    "no-inline-assembly": "off",
+    "avoid-low-level-calls": "off"
+  }
+}

@@ -1,0 +1,77 @@
+export {
+  HYPE_STAKING_DISCOUNT_TIERS,
+  getHypeStakingDiscount,
+  applyHypeStakingDiscountToFee,
+} from "./fee-schedule";
+export {
+  DEFAULT_AMORTIZED_REBALANCE_FRICTION_APY,
+  computeNetFundingApy,
+  effectiveTradingFee,
+  type NetFundingApyInput,
+  type NetFundingApyResult,
+} from "./apy-calculator";
+export {
+  FRICTION_BUFFER_APY,
+  passesDeltaNeutralHurdle,
+  resolveCapitalAllocation,
+  fundingHourlyToGrossApy,
+  type CapitalAllocationAction,
+  type CapitalAllocationResult,
+  type HurdleGateInput,
+} from "./rebalance-rules";
+export {
+  COMPOUND_THRESHOLD_USD,
+  COMPOUNDS_PER_YEAR,
+  projectExponentialGrowthApy,
+  trackHourlyFundingAccrual,
+  writeCompoundingToExecutionLog,
+  runAutoCompoundTick,
+  type AutoCompoundState,
+  type CompoundHistoryEntry,
+  type HourlyAccrualInput,
+  type HourlyAccrualResult,
+} from "./auto-compound";
+export {
+  MIN_CROSS_SPREAD_BPS,
+  computeCrossFundingSpread,
+  crossSpreadForSoil,
+  evaluateCrossSpreadSoilGate,
+  fetchHyperliquidFundingHourly,
+  fetchVertexFundingHourly,
+  resolveCrossDexFundingSpread,
+  type CrossSpreadLegSnapshot,
+  type CrossSpreadResult,
+  type CrossSpreadSoilInput,
+  type ExecutionHedgeVenue,
+  type ResolveCrossSpreadInput,
+} from "./cross-spread";
+export {
+  DEFAULT_GMX_PENALTY_BPS,
+  buildGmxPriceImpactMetrics,
+  cacheGmxPriceImpactSnapshot,
+  estimatePreliminaryImpact,
+  evaluateGmxPriceImpactSoilGate,
+  gmxPriceImpactForSoil,
+  getGmxPriceImpactCache,
+  poolWeightsFromGmxMarket,
+  type GmxV2PoolWeights,
+  type GmxV2PriceImpactInput,
+  type GmxV2PriceImpactMetrics,
+  type GmxV2PriceImpactResult,
+  type GmxV2PriceImpactSnapshot,
+  type GmxV2PriceImpactSoilInput,
+} from "./gmx-v2-price-impact";
+export {
+  buildGmxBalancerMetrics,
+  cacheGmxBalancerSnapshot,
+  evaluateAndCacheGmxBalancer,
+  evaluateGmxBalancerQualification,
+  getGmxBalancerCache,
+  isOrderOnUnderweightSide,
+  resolveGmxUnderweightSide,
+  type GmxUnderweightSide,
+  type GmxV2BalancerInput,
+  type GmxV2BalancerMetrics,
+  type GmxV2BalancerResult,
+  type GmxV2BalancerSnapshot,
+} from "./gmx-v2-balancer";

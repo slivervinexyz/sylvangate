@@ -1,0 +1,58 @@
+name: Grant Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: grant-audit-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CI: true
+  WRANGLER_SEND_METRICS: "false"
+  NEXT_PUBLIC_HUD_CANARY: bedelta-stealth
+  OWNER_IDENTITY: ci_owner
+  JAVIER_SIGNATURE: ci_javier
+
+jobs:
+  validate:
+    name: Typecheck · Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.1
+          run_install: false
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm exec tsc --noEmit
+
+      - name: Vitest (mock KV — no remote CF bindings)
+        run: pnpm test
+
+      - name: Yellow Page audit log
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: pnpm run audit:log
+        continue-on-error: true

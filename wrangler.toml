@@ -1,0 +1,23 @@
+# SSOT — bedelta-living-water → bedeltawater.slivervine.xyz
+# Secrets: wrangler secret put · local: .env.production (gitignored)
+
+name = "bedelta-living-water"
+main = "src/worker-entry.ts"
+compatibility_date = "2025-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[assets]
+directory = "dist"
+not_found_handling = "single-page-application"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/logs"]
+
+[[routes]]
+pattern = "bedeltawater.slivervine.xyz/*"
+zone_name = "slivervine.xyz"
+
+[triggers]
+crons = ["0 * * * *", "*/5 * * * *"]

@@ -1,0 +1,17 @@
+{
+  "case": "B1",
+  "wallet": "0xdf4c3Fe9bADCbb2Cf62c4b334aD021a34f88F913",
+  "ok": false,
+  "routeAllowed": false,
+  "deployable": false,
+  "direction": "blocked",
+  "capitalLabel": "AML_INBOUND_TO_ROBINHOOD_BLOCKED",
+  "inFlightUsd": 0,
+  "settledUsd": 0,
+  "lostUsd": 0,
+  "inboundToRobinhoodPermitted": false,
+  "reasons": [
+    "AML_INBOUND_TO_ROBINHOOD_BLOCKED"
+  ],
+  "at": "2026-09-21T01:54:30.414Z"
+}

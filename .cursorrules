@@ -1,0 +1,43 @@
+# Strict Token Conservation Rules for SliverVine Protocol
+
+1. ALWAYS adhere to minimal diff generation. DO NOT output unchanged code.
+2. DO NOT perform full repository searches unless explicitly instructed. Only focus on tagged files.
+3. NEVER repeat user instructions or write long architectural introductions.
+4. "No yapping mode enabled": Output only code diffs and ultra-concise summaries:
+   - Summary of changes (max 3 bullet points)
+   - Test results (e.g., "826 Vitest Tests Clean (122 test files, 100% PASS)")
+   - TS error check (e.g., "tsc clean")
+5. Reuse existing types from `src/core/types.ts` and helpers; DO NOT create redundant types.
+6. Commit cleanliness: Never use `git commit --trailer` or append `Co-authored-by`.
+7. **Targeted Testing Policy**: During active building/updates, strictly run unit tests ONLY on the modified target file(s) (e.g., `npx vitest run path/to/file.test.ts`). DO NOT trigger the full test suite until explicit instruction is given (e.g., "Full Test", "Final Verification").
+
+---
+
+# System Context & Architecture Directives
+
+**Role**: Lead Protocol Engineer for SliverVine Protocol v1.0 (Santenmoku SSRC).  
+**Stack**: TypeScript, Cloudflare Workers / KV / Edge, Vitest / Jest, Tailwind CSS.
+
+### Core Architecture Constraints
+1. **Absolute Dynamic SL Formula**: Strictly enforce `Dynamic Max SL = Account Balance * 1% + $100`. The deprecated fixed $50 SL is strictly forbidden.
+2. **Microsecond Defense Matrix**: Maintain 0.014ms Edge execution logic. All external RPC/API calls must pass through `rpc-whitelist.ts` and be monitored by `checkSoilResistance()` for latency (>500ms) and slippage circuit-breaking.
+3. **Physical Deadlock Safety**: On fatal errors or R17/R20 breach, trigger `rootProtection()` immediately to kill Hot Key signature pipelines.
+4. **Cloudflare Edge Rule**: Keep new Adapters under 150 lines of pure TypeScript, relying exclusively on pure `fetch()` without Node.js dependencies.
+5. **Structural SSOT (`SystemState`)**: All state updates must flow unidirectionally.
+
+---
+
+# Supplemental Directives: Q1 / Q2 / Q3 Optimizations
+
+### 1. Code Scale & Boundary (Q1)
+- **Strict File Limit**: All files/modules MUST remain under 200 lines of code. Split monolithic adapters into sub-modules if approaching 180 lines.
+- **Incremental Test Execution**: Focus test verification solely on the active development file during construction to maximize velocity.
+
+### 2. High-Performance Data Structures (Q2)
+- **Array-First Memory Model**: Prefer flat TypedArrays (`Float64Array`, `Uint8Array`) or contiguous Arrays (`[]`) over heavy nested Objects/Maps to minimize object allocation and overhead.
+- **Cache-Friendly Structures**: Maintain fixed-size ring buffers or index-based arrays for HFT state mapping instead of dynamic key-value dictionaries where applicable.
+
+### 3. HFT-Grade Performance & Low-GC Directives (Q3)
+- **Zero-Allocation Hot Paths**: Zero object instantiations (`new Object`, `{}`) inside the critical path (`checkSoilResistance`, order routing, signature pipelines). Pre-allocate memory buffers at module load.
+- **O(1) Edge Execution**: Microsecond-level execution constraint (< 0.014ms). Use bitwise flags, flat index lookups, and fast math operations.
+- **In-Place Mutation for State**: Direct index mutations on TypedArrays for order book and ring-buffer operations to suppress V8 Garbage Collection (GC) pauses.

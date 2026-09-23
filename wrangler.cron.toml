@@ -1,0 +1,12 @@
+# Isolated cron Worker — GMX↔HL hedge (heavy viem/HL signing stack).
+# Deploy: wrangler deploy -c wrangler.cron.toml
+
+name = "bedelta-living-water-cron"
+main = "src/worker-cron-entry.ts"
+compatibility_date = "2025-08-01"
+
+[observability]
+enabled = true
+
+[triggers]
+crons = ["*/5 * * * *"]

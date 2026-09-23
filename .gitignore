@@ -1,0 +1,102 @@
+# Build & Compilation Artifacts
+cache/
+out/
+broadcast/
+coverage/
+playwright-report/
+test-results/
+dist/
+dist-worker/
+dist-worker-probe/
+dist-worker-test/
+.wrangler/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Secrets & Local Configs
+.dev.vars
+.env.production
+.env
+.env.*
+!.env.example
+.env.local
+# wrangler.toml is committed SSOT (no secrets); do not re-ignore
+.cursor/
+.specstory/
+*.log
+.DS_Store
+logs/*
+!logs/.gitkeep
+
+# Design drafts & local brand artifacts (public/brand/ release assets are tracked SSOT)
+public/brand/drafts/
+public/brand/**/*draft*
+public/brand/**/*_wip.*
+design/
+*.psd
+*.ai
+*.sketch
+
+# Private Keys & Wallet
+*.pem
+*.key
+id_rsa*
+*.p12
+*.pfx
+wallet.json
+**/private-keys/
+
+# Lock Workspace & Dev Tooling
+*.code-workspace
+.grantignore
+san
+
+# ------------------------------------------------------------------------------
+# STRICT OPSEC WHITELIST FOR DOCUMENTS (BLOCK EVERYTHING BY DEFAULT)
+# ------------------------------------------------------------------------------
+# Block all root-level and sub-folder markdown files by default
+#*.md
+#docs/**
+
+
+# EXPLICITLY ALLOW ONLY PUBLIC GRANT ARTIFACTS
+!README.md
+!LICENSE
+!docker/README.md
+!docs/grants/
+!docs/grants/**
+!docs/README.md
+!docs/VERIFICATION_MATRIX.md
+!SECURITY.md
+!docs/audit/
+!docs/audit/**
+!docs/audit/negative-proofs-artifact.json
+!docs/audit/chaos-blackswan-metrics.json
+!docs/audit/zerodev-aa-metrics.json
+!docs/sdk/
+!docs/sdk/**
+
+# Internal scorecards / self-audits (local-only; do not publish)
+
+docs/audit/PROGRESS_TRUTH_CHECK.md
+docs/audit/BUILDATHON_JUDGE_REVIEW.md
+docs/audit/PRE_PUBLIC_RELEASE_REPORT.md
+
+# Runtime telemetry / demo outputs (not public SSOT)
+docs/audit/live-96h-telemetry.json
+docs/logging/last_delta_neutral_run.json
+docs/logging/last_e2e_run.json
+docs/logging/*dryrun*.json
+
+# Rust build artifacts (commit pkg/soil_core.wasm only; ignore all Cargo target dirs)
+**/target/
+
+# Internal OpSec — never publish (local-only Grok audits, pitch drafts, transcripts)
+docs/internal/
+
+# Sensitive & Internal Exclusion
+*.secret
+internal_notes/
+**/private_keys/

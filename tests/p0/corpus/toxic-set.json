@@ -1,0 +1,184 @@
+{
+  "schema": "silvervine.p0.corpus.toxic.v1",
+  "label": "toxic",
+  "cases": [
+    {
+      "id": "toxic-infinite-approve-erc20",
+      "category": "infinite_approve",
+      "venue": "gmx",
+      "lane": "retail_risk",
+      "expected": "block",
+      "payload": {
+        "method": "eth_sendTransaction",
+        "params": [
+          {
+            "from": "0x1111111111111111111111111111111111111111",
+            "to": "0xaf88d065e77c1c973b2696121c3f3f3f3f3f3f3f",
+            "data": "0x095ea7b3000000000000000000000000bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+          }
+        ],
+        "skipIntentGate": true
+      }
+    },
+    {
+      "id": "toxic-permit2-infinite-approve",
+      "category": "permit2_phishing",
+      "venue": "gmx",
+      "lane": "retail_risk",
+      "expected": "block",
+      "payload": {
+        "method": "eth_sendTransaction",
+        "params": [
+          {
+            "from": "0x1111111111111111111111111111111111111111",
+            "to": "0x000000000022d473030f116ddee9f6b43ac78b6",
+            "dataPreset": "permit2_phishing"
+          }
+        ],
+        "skipIntentGate": true
+      }
+    },
+    {
+      "id": "toxic-domain-drift-eip712",
+      "category": "domain_drift",
+      "venue": "pendle",
+      "lane": "retail_risk",
+      "expected": "block",
+      "payload": {
+        "method": "eth_signTypedData_v4",
+        "params": [
+          "0x1111111111111111111111111111111111111111",
+          "{\"domain\":{\"name\":\"Permit\",\"version\":\"1\",\"chainId\":42161,\"verifyingContract\":\"0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"},\"types\":{\"Permit\":[{\"name\":\"spender\",\"type\":\"address\"}]},\"primaryType\":\"Permit\",\"message\":{\"spender\":\"0xdddddddddddddddddddddddddddddddddddddddd\"}}"
+        ]
+      }
+    },
+    {
+      "id": "toxic-ai-4th-strike-retry",
+      "category": "ai_4th_strike_retry",
+      "venue": "hyperliquid",
+      "lane": "retail_intent_strike",
+      "expected": "block",
+      "payload": { "maxAttempts": 3, "strikes": 4, "venueBit": 1 }
+    },
+    {
+      "id": "toxic-gmx-oi-skew",
+      "category": "gmx_oi_skew",
+      "venue": "gmx",
+      "lane": "gmx_flags",
+      "expected": "block",
+      "payload": { "oiLong": 1800, "oiShort": 200, "tvl": 2000, "collateral": 1.2 }
+    },
+    {
+      "id": "toxic-pendle-oracle-lag",
+      "category": "pendle_oracle_lag",
+      "venue": "pendle",
+      "lane": "pendle_flags",
+      "expected": "block",
+      "payload": { "yieldCurrent": 0.08, "yieldOracle": 0.05 }
+    },
+    {
+      "id": "toxic-usdai-peg-drift",
+      "category": "usdai_peg_drift",
+      "venue": "usdai",
+      "lane": "usdai_flags",
+      "expected": "block",
+      "payload": { "oracleAgeMs": 1000, "pegDriftBps": 45, "navDeviationBps": 5 }
+    },
+    {
+      "id": "toxic-usdai-oracle-stale",
+      "category": "usdai_oracle_stale",
+      "venue": "usdai",
+      "lane": "usdai_flags",
+      "expected": "block",
+      "payload": { "oracleAgeMs": 8000000, "pegDriftBps": 5, "navDeviationBps": 5 }
+    },
+    {
+      "id": "toxic-hyperliquid-spread-jitter",
+      "category": "hyperliquid_spread_jitter",
+      "venue": "hyperliquid",
+      "lane": "hyperliquid_flags",
+      "expected": "block",
+      "payload": { "sessionValid": true, "orderSize": 1, "maxSize": 100, "spreadBps": 35, "rpm": 30 }
+    },
+    {
+      "id": "toxic-hyperliquid-session-velocity",
+      "category": "hyperliquid_session_velocity",
+      "venue": "hyperliquid",
+      "lane": "hyperliquid_flags",
+      "expected": "block",
+      "payload": { "sessionValid": false, "orderSize": 1, "maxSize": 100, "spreadBps": 10, "rpm": 30 }
+    },
+    {
+      "id": "toxic-variational-stale-quote",
+      "category": "variational_stale_quote",
+      "venue": "variational",
+      "lane": "variational_flags",
+      "expected": "block",
+      "payload": {
+        "quotePriceUsd": 3000,
+        "oracleMarkUsd": 3000,
+        "quoteTimestampMs": 1699999000000,
+        "nowMs": 1700000000000,
+        "tradeSizeUsd": 1000,
+        "olpDepthUsd": 100000
+      }
+    },
+    {
+      "id": "toxic-variational-olp-threshold",
+      "category": "variational_olp_threshold",
+      "venue": "variational",
+      "lane": "variational_flags",
+      "expected": "block",
+      "payload": {
+        "quotePriceUsd": 3000,
+        "oracleMarkUsd": 3000,
+        "quoteTimestampMs": 1700000000000,
+        "nowMs": 1700000000000,
+        "tradeSizeUsd": 50000,
+        "olpDepthUsd": 100000
+      }
+    },
+    {
+      "id": "toxic-soil-cross-venue",
+      "category": "soil_cross_venue",
+      "venue": "hyperliquid",
+      "lane": "gateway_soil",
+      "expected": "block",
+      "payload": {
+        "symbol": "ETH",
+        "soil": { "hlSpot": 3500, "hlPerp": 3500, "dydxPerp": 3000, "depthUsd": 500000, "orderSizeUsd": 500, "accountBalanceUsd": 10000, "maxSlippage": 0.005 }
+      }
+    },
+    {
+      "id": "toxic-pendle-gmx-open-thin-liquidity",
+      "category": "pendle_gmx_open_violation",
+      "venue": "pendle",
+      "lane": "pendle_gmx_cross",
+      "expected": "block",
+      "payload": {
+        "ptMarket": { "expiry": 1700086400, "historicalYield24h": 0.06, "liquidityConstant": 100 },
+        "gmxPos": { "intent": "open", "sizeNotionalUsd": 100000 },
+        "assetUsdPrice": 3000
+      }
+    },
+    {
+      "id": "toxic-venue-drift-contract",
+      "category": "venue_drift",
+      "venue": "variational",
+      "lane": "retail_venue",
+      "expected": "block",
+      "payload": { "contract": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" }
+    },
+    {
+      "id": "toxic-shallow-depth-honeypot",
+      "category": "depth_insufficient",
+      "venue": "gmx",
+      "lane": "gateway_soil",
+      "expected": "block",
+      "payload": {
+        "symbol": "ETH",
+        "soil": { "hlSpot": 3500, "hlPerp": 3500, "dydxPerp": 3498, "depthUsd": 50000, "orderSizeUsd": 500, "accountBalanceUsd": 10000, "maxSlippage": 0.005 }
+      }
+    }
+  ]
+}

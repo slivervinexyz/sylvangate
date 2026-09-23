@@ -1,0 +1,28 @@
+export {
+  ARB_GAS_INFO,
+  ARBITRUM_ETH_USD_FEED,
+  GAS_SURCHARGE_YIELD_RATIO,
+  ORACLE_LAG_DEADLOCK_MS,
+  ON_CHAIN_RPC_FAIL_CLOSED_TIMEOUT_MS,
+  DEFAULT_CALLDATA_BYTES,
+  DEFAULT_BLOB_BYTES,
+  DEFAULT_GMX_EXECUTION_FEE_WEI,
+  GAS_GUARD_TTL_MS,
+  DEFAULT_TARGET_YIELD_USD,
+  __resetArbitrumGasGuardForTests,
+  __setArbitrumGasGuardForTests,
+  estimateL1SurchargeWei,
+  estimateGmxKeeperExecutionFeeWei,
+  evaluateGasSurcharge,
+  evaluateOracleLag,
+  isArbitrumGasGuardBlocked,
+  getArbitrumGasGuardReason,
+  buildArbitrumGasGuardMetrics,
+  buildArbitrumGasGuardMetricsOrFallback,
+  buildL1GasSurchargeMetrics,
+  type ArbitrumGasGuardState,
+  type ArbitrumGasGuardMetrics,
+  type L1GasSurchargeMetrics,
+} from "./arbitrum-gas-guard-lib/arbitrum-gas-guard-eval";
+
+export { refreshArbitrumGasGuard } from "./arbitrum-gas-guard-lib/arbitrum-gas-guard-refresh";

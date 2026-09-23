@@ -1,0 +1,11 @@
+version = 1
+root = "."
+
+# Audited false positives — inline ECDSA malleability guard, timelock errors via selectors, indexed gas tradeoffs.
+[detectors]
+exclude = [
+  "ecrecover",
+  "unindexed-events",
+  "large-numeric-literal",
+  "useless-error",
+]

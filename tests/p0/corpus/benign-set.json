@@ -1,0 +1,177 @@
+{
+  "schema": "silvervine.p0.corpus.benign.v1",
+  "label": "benign",
+  "cases": [
+    {
+      "id": "benign-normal-transfer-gmx",
+      "category": "normal_transfer",
+      "venue": "gmx",
+      "lane": "retail_risk",
+      "expected": "allow",
+      "payload": {
+        "method": "eth_sendTransaction",
+        "params": [{ "from": "0x1111111111111111111111111111111111111111", "to": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "value": "0x0" }]
+      }
+    },
+    {
+      "id": "benign-gmx-increase",
+      "category": "gmx_increase",
+      "venue": "gmx",
+      "lane": "retail_risk",
+      "expected": "allow",
+      "payload": {
+        "method": "eth_sendTransaction",
+        "params": [
+          {
+            "from": "0x1111111111111111111111111111111111111111",
+            "to": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "data": "0x7ebc83b20000000000000000000000000000000000000000000000000000000000000000"
+          }
+        ],
+        "skipIntentGate": true
+      }
+    },
+    {
+      "id": "benign-gmx-decrease",
+      "category": "gmx_decrease",
+      "venue": "gmx",
+      "lane": "gmx_flags",
+      "expected": "allow",
+      "payload": { "oiLong": 520, "oiShort": 480, "tvl": 2000, "collateral": 1.2 }
+    },
+    {
+      "id": "benign-pendle-swap",
+      "category": "pendle_swap",
+      "venue": "pendle",
+      "lane": "pendle_flags",
+      "expected": "allow",
+      "payload": { "yieldCurrent": 0.051, "yieldOracle": 0.05 }
+    },
+    {
+      "id": "benign-usdai-vault-deposit",
+      "category": "usdai_vault_deposit",
+      "venue": "usdai",
+      "lane": "usdai_flags",
+      "expected": "allow",
+      "payload": { "oracleAgeMs": 60000, "pegDriftBps": 8, "navDeviationBps": 5 }
+    },
+    {
+      "id": "benign-usdai-peg-stable",
+      "category": "usdai_peg_stable",
+      "venue": "usdai",
+      "lane": "usdai_flags",
+      "expected": "allow",
+      "payload": { "oracleAgeMs": 120000, "pegDriftBps": 12, "navDeviationBps": 10 }
+    },
+    {
+      "id": "benign-hyperliquid-rfq-clean",
+      "category": "hyperliquid_rfq_clean",
+      "venue": "hyperliquid",
+      "lane": "hyperliquid_flags",
+      "expected": "allow",
+      "payload": { "sessionValid": true, "orderSize": 5, "maxSize": 100, "spreadBps": 12, "rpm": 45 }
+    },
+    {
+      "id": "benign-hyperliquid-session-key",
+      "category": "hyperliquid_session_key",
+      "venue": "hyperliquid",
+      "lane": "hyperliquid_flags",
+      "expected": "allow",
+      "payload": { "sessionValid": true, "orderSize": 2, "maxSize": 50, "spreadBps": 8, "rpm": 20 }
+    },
+    {
+      "id": "benign-variational-trade-clean",
+      "category": "variational_trade_clean",
+      "venue": "variational",
+      "lane": "variational_flags",
+      "expected": "allow",
+      "payload": {
+        "quotePriceUsd": 3000,
+        "oracleMarkUsd": 3000,
+        "quoteTimestampMs": 1700000000000,
+        "nowMs": 1700000000200,
+        "tradeSizeUsd": 5000,
+        "olpDepthUsd": 200000
+      }
+    },
+    {
+      "id": "benign-variational-rfq-normal",
+      "category": "variational_rfq_normal",
+      "venue": "variational",
+      "lane": "variational_flags",
+      "expected": "allow",
+      "payload": {
+        "quotePriceUsd": 2998,
+        "oracleMarkUsd": 3000,
+        "quoteTimestampMs": 1700000000000,
+        "nowMs": 1700000000100,
+        "tradeSizeUsd": 2000,
+        "olpDepthUsd": 150000
+      }
+    },
+    {
+      "id": "benign-trusted-infinite-approve",
+      "category": "trusted_approve",
+      "venue": "gmx",
+      "lane": "retail_approve",
+      "expected": "allow",
+      "payload": {
+        "token": "0xaf88d065e77c1c973b2696121c3f3f3f3f3f3f3f",
+        "spender": "0xdddddddddddddddddddddddddddddddddddddddd",
+        "amountWei": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "infinite": true
+      }
+    },
+    {
+      "id": "benign-observatory-emergency-close",
+      "category": "observatory_emergency_close",
+      "venue": "pendle",
+      "lane": "pendle_gmx_cross",
+      "expected": "allow",
+      "observatoryParadox": true,
+      "payload": {
+        "ptMarket": { "expiry": 1700086400, "historicalYield24h": 0.06, "liquidityConstant": 100 },
+        "gmxPos": { "intent": "close", "sizeNotionalUsd": 100000 },
+        "assetUsdPrice": 3000
+      }
+    },
+    {
+      "id": "benign-observatory-reduce-position",
+      "category": "observatory_reduce",
+      "venue": "pendle",
+      "lane": "pendle_gmx_cross",
+      "expected": "allow",
+      "observatoryParadox": true,
+      "payload": {
+        "ptMarket": { "expiry": 1700086400, "historicalYield24h": 0.06, "liquidityConstant": 100 },
+        "gmxPos": { "intent": "reduce", "sizeNotionalUsd": 100000 },
+        "assetUsdPrice": 3000
+      }
+    },
+    {
+      "id": "benign-eip712-allowlisted-permit",
+      "category": "eip712_permit",
+      "venue": "pendle",
+      "lane": "retail_risk",
+      "expected": "allow",
+      "payload": {
+        "method": "eth_signTypedData_v4",
+        "params": [
+          "0x1111111111111111111111111111111111111111",
+          "{\"domain\":{\"name\":\"Permit\",\"version\":\"1\",\"chainId\":42161,\"verifyingContract\":\"0xaf88d065e77c1c973b2696121c3f3f3f3f3f3f3f\"},\"types\":{\"Permit\":[{\"name\":\"spender\",\"type\":\"address\"}]},\"primaryType\":\"Permit\",\"message\":{\"spender\":\"0xdddddddddddddddddddddddddddddddddddddddd\"}}"
+        ]
+      }
+    },
+    {
+      "id": "benign-gmx-healthy-open",
+      "category": "gmx_open_healthy",
+      "venue": "gmx",
+      "lane": "pendle_gmx_cross",
+      "expected": "allow",
+      "payload": {
+        "gmxPos": { "intent": "open", "sizeNotionalUsd": 50000 },
+        "assetUsdPrice": 3000
+      }
+    }
+  ]
+}

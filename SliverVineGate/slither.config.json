@@ -1,0 +1,5 @@
+{
+  "detectors_to_run": "all",
+  "detectors_to_exclude": "low-level-calls,naming-convention,reentrancy-benign,timestamp,assembly,incorrect-equality",
+  "filter_paths": "lib"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "network": "arbitrum-sepolia",
+  "timestamp": "2026-08-09T15:42:05.018Z",
+  "sepoliaTxHash": "0x8c4489f9a0e61a2b7ad4d1001107e2dcd63cd2f79cb1e676865bbef613036dc6",
+  "latencyMs": 611,
+  "hlOrderId": "hl-dry-5d5ac211381a3240",
+  "arbiscanUrl": "https://sepolia.arbiscan.io/tx/0x8c4489f9a0e61a2b7ad4d1001107e2dcd63cd2f79cb1e676865bbef613036dc6",
+  "gmx": {
+    "underweightSide": "short",
+    "longBorrowRateHourly": 0,
+    "shortBorrowRateHourly": 0,
+    "uiFeeReceiver": "0xc9BddABD80982d2201376195DD9B85fb7951546f",
+    "uiFeeBps": 10,
+    "uiFeeLabel": "UI Fee Accrual (10 bps)",
+    "depositCalldata": {
+      "action": "deposit",
+      "marketToken": "0x0000000000000000000000000000000000000e01",
+      "collateralToken": "USDC",
+      "longTokenAmountUsd": "50.00",
+      "shortTokenAmountUsd": "50.00",
+      "executionFee": "1000000000000000",
+      "receiver": "0x0000000000000000000000000000000000000000",
+      "uiFeeReceiver": "0xc9BddABD80982d2201376195DD9B85fb7951546f",
+      "referralCode": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "simulated": true
+  },
+  "hl": {
+    "orderId": "hl-dry-5d5ac211381a3240",
+    "symbol": "ETH",
+    "side": "SHORT",
+    "dryRun": true,
+    "simulated": true
+  }
+}

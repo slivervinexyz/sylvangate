@@ -1,0 +1,39 @@
+{
+  "schema": "sanm-hud-v0.9",
+  "defaultStep": 0,
+  "frames": [
+    {
+      "minute": 0,
+      "system_status": "NOMINAL",
+      "nirvana_rwa_evacuation_triggered": false,
+      "isomorphic_metrics": {
+        "fci_index": 0.12,
+        "hawking_chronology_protection_delta": 0.04,
+        "string_tension_amplitude": 0.0012
+      },
+      "chakra_flow": { "active_center": "ROOT" }
+    },
+    {
+      "minute": 8,
+      "system_status": "ELEVATED",
+      "nirvana_rwa_evacuation_triggered": false,
+      "isomorphic_metrics": {
+        "fci_index": 0.31,
+        "hawking_chronology_protection_delta": 0.18,
+        "string_tension_amplitude": 0.0041
+      },
+      "chakra_flow": { "active_center": "SOLAR" }
+    },
+    {
+      "minute": 16,
+      "system_status": "FAIL_CLOSED",
+      "nirvana_rwa_evacuation_triggered": true,
+      "isomorphic_metrics": {
+        "fci_index": 0.8471,
+        "hawking_chronology_protection_delta": 4.71,
+        "string_tension_amplitude": 0.0198
+      },
+      "chakra_flow": { "active_center": "CROWN" }
+    }
+  ]
+}

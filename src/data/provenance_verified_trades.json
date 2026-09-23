@@ -1,0 +1,51 @@
+{
+  "schema": "silvervine.provenance-verified-trades.v1",
+  "recordedAt": "2026-08-10T00:00:00.000Z",
+  "trades": [
+    {
+      "oid": "513344575969",
+      "network": "hyperliquid-mainnet",
+      "venue": "hyperliquid",
+      "symbol": "ETH",
+      "side": "SHORT",
+      "sizeEth": 0.2223,
+      "notionalUsd": 422.19,
+      "marginUsd": 422.19,
+      "executionMode": "session-key",
+      "dryRun": false,
+      "livePost": true,
+      "wallet": "0xef0752df6387248B897F3A59A180af42D801960d",
+      "explorerUrl": "https://app.hyperliquid.xyz/explorer/address/0xef0752df6387248B897F3A59A180af42D801960d",
+      "hedgeTarget": "gmx-v2-gm-eth-usd-arbitrum-one",
+      "verification": {
+        "method": "hl-info-orderStatus",
+        "endpoint": "https://api.hyperliquid.xyz/info",
+        "requestBody": {
+          "type": "orderStatus",
+          "user": "0xef0752df6387248B897F3A59A180af42D801960d",
+          "oid": "513344575969"
+        }
+      }
+    },
+    {
+      "network": "arbitrum-one",
+      "venue": "gmx-v2",
+      "symbol": "ETH",
+      "side": "LONG_GM",
+      "txHash": "0x9af4d7224639e5e72289fec7688ecbff19978ecf84d1bb06471ef1daf129f760",
+      "wallet": "0xc9BddABD80982d2201376195DD9B85fb7951546f",
+      "explorerUrl": "https://arbiscan.io/tx/0x9af4d7224639e5e72289fec7688ecbff19978ecf84d1bb06471ef1daf129f760",
+      "hedgeLeg": "gmx-gm-pool-deposit",
+      "verification": {
+        "method": "arbiscan-mainnet-tx",
+        "label": "GMX v2 CreateOrder / GM Deposit"
+      }
+    }
+  ],
+  "aggregate": {
+    "liveMainnetOrderCount": 1,
+    "gmxArbitrumAnchorCount": 1,
+    "testnetSuite": "HL_TESTNET_5TX_VERIFY (see verified_5tx_results.json — hyperliquid-testnet)",
+    "stub": false
+  }
+}

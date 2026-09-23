@@ -1,0 +1,26 @@
+[package]
+name = "sanctuary_invariants"
+version = "0.1.0"
+edition = "2021"
+license = "BUSL-1.1"
+description = "Sanctuary GMX + soil invariant Stylus coprocessor (Phase C)"
+
+[dependencies]
+stylus-sdk = { version = "0.10.7", optional = true }
+
+[features]
+default = ["mini-alloc", "stylus"]
+export-abi = ["stylus", "stylus-sdk/export-abi"]
+host-export = []
+mini-alloc = ["stylus", "stylus-sdk/mini-alloc"]
+stylus = ["dep:stylus-sdk"]
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[profile.release]
+codegen-units = 1
+strip = true
+lto = true
+panic = "abort"
+opt-level = "z"

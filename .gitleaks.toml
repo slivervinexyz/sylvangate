@@ -1,0 +1,9 @@
+[allowlist]
+description = "Allow testnet mock keys and docs"
+paths = [
+  '''tests/''',
+  '''docs/''',
+  '''scripts/''',
+  '''\.env\.example'''
+]
+regexes = ['''0x[a-fA-F0-9]{64}''']

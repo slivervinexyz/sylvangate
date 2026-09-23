@@ -1,0 +1,9 @@
+testMode: "property"
+testLimit: 2000
+seqLen: 20
+timeout: 90
+prefix: "echidna_"
+deployer: "0x0000000000000000000000000000000000030000"
+sender: ["0x10000", "0x40000", "0x50000"]
+format: "text"
+disableSlither: true
