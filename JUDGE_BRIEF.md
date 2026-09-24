@@ -74,6 +74,8 @@ Full index: [docs/logging/ROBINHOOD_LIVEFIRE_ARTIFACTS.md](docs/logging/ROBINHOO
 
 **Architecture deep-dive:** [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md) — 4663 intent attestation vs `42161` destination metadata.
 
+⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks.
+
 ---
 
 ## Core Modules

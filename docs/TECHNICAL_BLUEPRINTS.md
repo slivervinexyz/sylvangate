@@ -19,6 +19,36 @@ Architecture: [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](./CROSS_CHAIN_ARCHITECTURE_
 
 ---
 
+## Blueprint 2 — AI Agent / ZeroDev Perps
+
+Agent UserOp intent shield for ZeroDev Kernel accounts — **decision-only** in this SKU slice (not a hero path).
+
+| Export | File | Role |
+|--------|------|------|
+| `evaluateAgentExoMeshGuard()` | `src/core/agent-exomesh-guard.ts` | Maps agent intent → `SoilResistanceInput` → `checkSoilResistance()` |
+| `guardAgentUserOp()` | `src/core/agent-exomesh-guard.ts` | Async gate; returns reject payload on soil trip |
+| `ZERODEV_KERNEL_VERSION` | `zerodev-aa-constants.ts` | Current demo: **v0.3.1** + EntryPoint 0.7 |
+
+Flow: agent intent → soil reflex → pass → existing v3 UserOp draft / bundler path; trip → **0-Gas reject** before broadcast.
+
+### ZeroDev Kernel v4 Extendable Condition Interface Alignment
+
+ZeroDev Kernel v4 (beta-SDK) introduces the **Extendable Condition Interface** — pluggable off-chain evaluators that must return a dynamic pass/fail verdict before UserOp bundling.
+
+SliverVine maps this spec to existing Wasm infrastructure:
+
+| v4 concept | SliverVine export | Location |
+|------------|-------------------|----------|
+| Condition evaluator | `checkSoilResistance()` | `src/core/risk-engine-soil.ts` |
+| Probe type wrapper | `ZeroDevV4ConditionProbe` | `zerodev-aa-types.ts` |
+| Readiness flag | `ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY = true` | `zerodev-aa-constants.ts` |
+
+**Pre-bundle gate:** `ZeroDevV4ConditionProbe.evaluate(input)` runs the sub-microsecond Wasm soil reflex (`computeSoilSlippageMetrics` lane, p50 ~15µs) as an **off-chain / edge pre-condition** — if `tripped === true`, the UserOp never reaches the ZeroDev bundler. On pass, control falls through to the unchanged v3 path (`guardAgentUserOp` → Kernel 0.3.1 + EP 0.7).
+
+**Honesty:** `ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY` is an **interface-readiness declaration**, not a runtime switch. `pnpm demo:robinhood-sentinel` and live-fire probes continue on Kernel **v0.3.1**; v4 alignment is exported as a type spec + adapter constant for integrators targeting the beta-SDK.
+
+---
+
 ## Blueprint 4 — AI Agent Simulation: Grok Bot x Pons Launchpad Protection
 
 ### Scenario

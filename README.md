@@ -113,6 +113,8 @@ Verifiable capital-safety feed for Robinhood Chain traders — maps audit snapsh
 
 For a detailed technical breakdown of our 4663 → 42161 cross-chain intent attestation and contract deployment status, see [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md).
 
+⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks.
+
 ## Honest footnotes
 
 - **A-Tier2-mainnet** uses stub attestation · `bridgeDeployed: false` · **not** a production cross-chain bridge buffer

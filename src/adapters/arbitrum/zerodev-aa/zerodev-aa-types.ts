@@ -1,4 +1,15 @@
 /** @module ZeroDev Kernel v3 — ERC-7579 Modular Account Hook typings (Ultra-Relay Intent Network SSOT) */
+import type { SoilResistanceInput, SoilResistanceResult } from "../../../core/soil-resistance-types";
+import type { ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY } from "./zerodev-aa-constants";
+
+/** Maps checkSoilResistance() signature to Kernel v4 Extendable Condition evaluator. */
+export type ZeroDevV4ConditionEvaluator = (input: SoilResistanceInput) => SoilResistanceResult;
+
+/** Off-chain pre-condition gate — bind `evaluate: checkSoilResistance` from risk-engine-soil.ts. */
+export interface ZeroDevV4ConditionProbe {
+  readonly interfaceReady: typeof ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY;
+  evaluate: ZeroDevV4ConditionEvaluator;
+}
 
 export interface ZeroDevAAConfigOptions {
   pmKey?: string;

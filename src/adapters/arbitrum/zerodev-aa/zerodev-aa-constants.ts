@@ -6,6 +6,8 @@ export const ARBITRUM_NOVA_CHAIN_ID = 42170 as const;
 export const ZERODEV_KERNEL_VERSION = "0.3.1" as const;
 /** ZeroDev Kernel v3 — ERC-7579 Modular Account · Ultra-Relay Intent Network (Pillar 1 opt-in). */
 export const ZERODEV_ULTRA_RELAY_INTENT_NETWORK = true as const;
+/** ZeroDev Kernel v4 Extendable Condition Interface readiness flag */
+export const ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY = true as const;
 export const ZERODEV_ENTRY_POINT_VERSION = "0.7" as const;
 export const ZERODEV_ENTRY_POINT_ADDRESS = entryPoint07Address;
 
