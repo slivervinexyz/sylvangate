@@ -4,6 +4,7 @@ coverage/
 dist/
 node_modules/
 public/
+!public/brand/sylvangate-hero.webp
 *.png
 *.gif
 *.jpg
