@@ -4,11 +4,45 @@
 
 Standalone SKU (`@slivervine/robinhood-sentinel-escort`) for the Robinhood Chain reserved slot. Kernel accounts on Robinhood Chain sponsor outbound UserOps toward Arbitrum One (`42161`) under a fail-closed intent gate. Inbound routes are blocked by a **Permissioned Airlock** (chain-id boundary predicate). Pending capital never books phantom loss (`lostUsd ≡ 0`).
 
-## Quick start
+## 🚀 Quickstart & Installation
+
+**Package:** `@slivervine/robinhood-sentinel-escort` · Home chain `4663` / `46630`
+
+### Install (integrators)
 
 ```bash
-pnpm demo:robinhood-sentinel
-pnpm test          # across-ingress-bridge 6/6
+pnpm add @slivervine/robinhood-sentinel-escort
+# or: npm install @slivervine/robinhood-sentinel-escort
+```
+
+> This repo is currently `private` — judges and integrators should **clone** and install locally until the package is published:
+
+```bash
+git clone https://github.com/SilverVineLabs/slivervine-kernel-escort-rhchain.git
+cd slivervine-kernel-escort-rhchain && pnpm install
+```
+
+### TypeScript — intent guard @ 4663
+
+`checkSoilResistance()` trips on slippage/depth fuse and calls `applySoilTripSeverance(true)` internally (`risk-engine-soil.ts` L76) — **0-Gas** before sign:
+
+```typescript
+import { checkSoilResistance } from "./src/core/risk-engine-soil";
+import type { SoilResistanceInput } from "./src/core/soil-resistance-types";
+import { ROBINHOOD_MAINNET_CHAIN_ID } from "./src/sdk/constants";
+
+const intent: SoilResistanceInput = { symbol: "PONS", chainId: ROBINHOOD_MAINNET_CHAIN_ID, hlSpot: 1, hlPerp: 1, dydxPerp: 1.15, orderSizeUsd: 1000, maxSlippage: 0.01, at: new Date() };
+const verdict = checkSoilResistance(intent);
+if (verdict.tripped) throw new Error(`0-Gas reject — severed before sign (${verdict.reasons.join(",")})`);
+```
+
+See [docs/TECHNICAL_BLUEPRINTS.md](docs/TECHNICAL_BLUEPRINTS.md) · Blueprint 4 for full Grok Bot × Pons simulation.
+
+### Judge 10s live CLI
+
+```bash
+pnpm demo:robinhood-sentinel   # Hero 1–3 · expect ALL PATHS PASS
+pnpm test                      # across-ingress-bridge 6/6
 ```
 
 ## Three hero paths (single CLI run)
@@ -92,3 +126,18 @@ For a detailed technical breakdown of our 4663 → 42161 cross-chain intent atte
 - `src/adapters/arbitrum/zerodev-aa/` — Kernel / EntryPoint constants
 - `src/sdk/robinhood-audit-snapshot.ts` — SHA-256 audit certificate
 - `tests/adapters/across-ingress-bridge.test.ts` — **6/6** SSOT
+
+## 🔗 Relationship to Flagship Monorepo
+
+This repository is a dedicated, standalone SKU built specifically for **Robinhood Chain (Chain ID: 4663 Mainnet / 46630 Testnet)**.
+
+It extracts and refines the **4663 ZeroDev Kernel Escort**, **Permissioned Inbound Airlock**, and **SHA-256 Audit Snapshot** from our flagship [SliverVine Protocol Monorepo](https://github.com/SilverVineLabs/bedelta-living-water).
+
+| | This SKU (`@slivervine/robinhood-sentinel-escort`) | Flagship monorepo (`bedelta-living-water`) |
+|---|---------------------------------------------------|---------------------------------------------|
+| **Scope** | Robinhood-native escort decision layer only | Full Citadel gateway — GMX, Worker ingress, multi-venue soil matrix |
+| **Tests** | **6/6 PASS** — `tests/adapters/across-ingress-bridge.test.ts` | Full Vitest suite (monorepo-wide) |
+| **Judge CLI** | `pnpm demo:robinhood-sentinel` — self-contained, **ALL PATHS PASS** | `demo:exomesh` / venue demos / Worker API |
+| **Mainnet proof** | [0x02ced821…951d](https://explorer.chain.robinhood.com/tx/0x02ced8215cb1a9f6ec1b82dd39e01536991f278967d63c63dc29bde2ef6d951d) on **4663** | Multi-chain live-fire + grant audit telemetry |
+
+**Not included in this spinoff:** Cloudflare Worker ingress, full 1206-test matrix, EIP-1193 wallet middleware source, or production vault deploy (`contractDeployed: false`). See [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md) for cross-chain honesty boundaries.
