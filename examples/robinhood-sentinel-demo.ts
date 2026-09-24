@@ -1,5 +1,5 @@
 #!/usr/bin/env tsx
-/** SliverVine Kernel Escort for Robinhood Chain — single-run three hero paths. */
+/** SliverVine SylvanGate for Robinhood Chain — single-run three hero paths. */
 import {
   AML_INBOUND_TO_ROBINHOOD_BLOCKED,
   ARBITRUM_ONE_CHAIN_ID,
@@ -60,7 +60,7 @@ function assertLostUsdZero(lostUsd: number): void {
 function printBanner(): void {
   console.log("");
   boxOpen(CYAN);
-  boxLine(` ${CYAN}${BOLD}SliverVine Kernel Escort for Robinhood Chain${R}`, CYAN);
+  boxLine(` ${CYAN}${BOLD}SliverVine SylvanGate for Robinhood Chain${R}`, CYAN);
   boxLine(` ${GRAY}home chain${R}  ${ROBINHOOD_MAINNET_CHAIN_ID} mainnet / ${ROBINHOOD_TESTNET_CHAIN_ID} testnet`, CYAN);
   boxLine(` ${GRAY}dest${R}        Arbitrum One ${ARBITRUM_ONE_CHAIN_ID} (outbound escort)`, CYAN);
   boxClose(CYAN);
@@ -90,7 +90,7 @@ function runHero1KernelEscort(): boolean {
   assertLostUsdZero(escort.lostUsd);
   const pass = escort.ok && escort.routeAllowed && quote.ok && quote.bridgeEscortOk;
   boxOpen(pass ? GREEN : RED);
-  boxLine(` ${BOLD}Hero 1 · Kernel Escort (Home Chain ${ROBINHOOD_MAINNET_CHAIN_ID})${R}`, pass ? GREEN : RED);
+  boxLine(` ${BOLD}Hero 1 · SylvanGate Pre-Sign Gate (Home Chain ${ROBINHOOD_MAINNET_CHAIN_ID})${R}`, pass ? GREEN : RED);
   boxRule(pass ? GREEN : RED);
   boxLine(` ${GRAY}Kernel${R}       v${ZERODEV_KERNEL_VERSION} · EntryPoint v${ZERODEV_ENTRY_POINT_VERSION}`, pass ? GREEN : RED);
   boxLine(` ${GRAY}EP${R}           ${shortHex(ZERODEV_ENTRY_POINT_ADDRESS)}`, pass ? GREEN : RED);

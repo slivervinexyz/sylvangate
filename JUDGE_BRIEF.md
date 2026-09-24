@@ -1,8 +1,8 @@
-# SliverVine Kernel Escort for Robinhood Chain (Chain ID: 4663)
+# SliverVine SylvanGate for Robinhood Chain (Chain ID: 4663)
 
-> **0-Gas Off-Chain Inbound Airlock & Outbound Capital Escort Gateway for Robinhood Chain**
+> **0-Gas Off-Chain Inbound Airlock & SylvanGate Pre-Sign Intent Gateway for Robinhood Chain**
 
-**SKU:** `@slivervine/robinhood-sentinel-escort`
+**SKU:** `@slivervine/sylvangate`
 
 ---
 
@@ -38,7 +38,7 @@ pnpm demo:robinhood-sentinel
 
 | Hero | What displays | Key proof |
 |------|---------------|-----------|
-| **1 — Kernel Escort** | ZeroDev Kernel v0.3.1 + EntryPoint 0.7 · route `4663→42161` · `bridgeEscortOk=true` | `lostUsd=0` · archived mainnet tx (NOT re-broadcast) |
+| **1 — SylvanGate Pre-Sign Gate** | ZeroDev Kernel v0.3.1 + EntryPoint 0.7 · route `4663→42161` · `bridgeEscortOk=true` | `lostUsd=0` · archived mainnet tx (NOT re-broadcast) |
 | **2 — Permissioned Airlock** | `42161→4663` fail-closed · chain-id boundary predicate | `AML_INBOUND_TO_ROBINHOOD_BLOCKED` |
 | **3 — SHA-256 Audit Cert** | Full `buildRobinhoodAuditSnapshot()` JSON to stdout | `inboundBlocked: true` · `sha256Signature` emitted |
 
@@ -74,7 +74,7 @@ Full index: [docs/logging/ROBINHOOD_LIVEFIRE_ARTIFACTS.md](docs/logging/ROBINHOO
 
 **Architecture deep-dive:** [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md) — 4663 intent attestation vs `42161` destination metadata.
 
-⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks.
+⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks. Aligns with `@zerodev/sdk` Permissions (Signers/Policies/Actions) and Kernel v4 Extendable Condition Interface (beta-SDK).
 
 ---
 

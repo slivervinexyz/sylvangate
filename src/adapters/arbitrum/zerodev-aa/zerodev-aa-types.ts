@@ -1,8 +1,22 @@
-/** @module ZeroDev Kernel v3 — ERC-7579 Modular Account Hook typings (Ultra-Relay Intent Network SSOT) */
+/** @module SliverVine SylvanGate (v1.0 SSRC) — ZeroDev Kernel v3 ERC-7579 Hook typings */
 import type { SoilResistanceInput, SoilResistanceResult } from "../../../core/soil-resistance-types";
 import type { ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY } from "./zerodev-aa-constants";
 
-/** Maps checkSoilResistance() signature to Kernel v4 Extendable Condition evaluator. */
+export type {
+  Action,
+  KERNEL_V3_VERSION_TYPE,
+  KERNEL_VERSION_TYPE,
+  KernelPluginManager,
+  KernelValidatorHook,
+} from "@zerodev/sdk";
+
+/** Upstream-aligned condition verdict — maps SoilResistanceResult.tripped → satisfied. */
+export interface ZeroDevV4ConditionVerdict {
+  satisfied: boolean;
+  soil: SoilResistanceResult;
+}
+
+/** Extendable Condition evaluator — upstream beta-SDK naming; bind checkSoilResistance. */
 export type ZeroDevV4ConditionEvaluator = (input: SoilResistanceInput) => SoilResistanceResult;
 
 /** Off-chain pre-condition gate — bind `evaluate: checkSoilResistance` from risk-engine-soil.ts. */
@@ -24,11 +38,11 @@ export interface ZeroDevAAEnvConfig extends ZeroDevAAConfigOptions {
   bundlerRpc: string;
 }
 
-/** ERC-7579 module type IDs — ZeroDev Kernel v3 Modular Account Hook standard. */
+/** ERC-7579 standard module type IDs (distinct from upstream VALIDATOR_TYPE hex flags). */
 export const ERC7579_MODULE_TYPE_VALIDATOR = 1 as const;
 export const ERC7579_MODULE_TYPE_HOOK = 4 as const;
 
-/** `SliverVineRiskOracle` — ERC-7579 Pre-Execution Hook (TYPE 4) before Ultra-Relay ingress. */
+/** SliverVineRiskOracle — aligns with upstream KernelValidatorHook pre-execution gate (TYPE 4). */
 export interface Erc7579PreExecutionHookBinding {
   hookType: typeof ERC7579_MODULE_TYPE_HOOK;
   riskOracleContract: `0x${string}`;
@@ -36,7 +50,7 @@ export interface Erc7579PreExecutionHookBinding {
   ultraRelayIntentNetwork: boolean;
 }
 
-/** Kernel v3 scoped session validator — ERC-7579 TYPE 1 (`ORDER_EXECUTE`). */
+/** Kernel v3 Permission path — ERC-7579 TYPE 1; see upstream VALIDATOR_TYPE.PERMISSION. */
 export interface Erc7579ValidatorModuleBinding {
   moduleType: typeof ERC7579_MODULE_TYPE_VALIDATOR;
   sessionPermission: "ORDER_EXECUTE";

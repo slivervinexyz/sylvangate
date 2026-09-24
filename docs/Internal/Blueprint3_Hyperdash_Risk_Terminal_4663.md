@@ -1,6 +1,6 @@
 # Blueprint 3 — Treasury Escort & Audit · Hyperdash-Style Risk Terminal @ 4663
 
-**SKU:** `@slivervine/robinhood-sentinel-escort` · **Complement Module (decision-only)**  
+**SKU:** `@slivervine/sylvangate` · **Complement Module (decision-only)**  
 **Chain:** Robinhood Chain `4663` / `46630` → Arbitrum One `42161`  
 **Status:** Internal judge supplement — **not** a shipped hero path UI
 
@@ -198,7 +198,7 @@ function formatHyperdashRiskFeed(snapshot: RobinhoodAuditSnapshot): string {
 
 | Hero | Terminal 顯示 | 真實函數 / artifact |
 |------|--------------|---------------------|
-| Hero 1 Kernel Escort | `4663→42161 · bridgeEscortOk · routeId` | `quoteRChainYieldToArbitrumGm` + A-Tier2-mainnet JSON |
+| Hero 1 SylvanGate Pre-Sign Gate | `4663→42161 · bridgeEscortOk · routeId` | `quoteRChainYieldToArbitrumGm` + A-Tier2-mainnet JSON |
 | Hero 2 Airlock | `42161→4663 BLOCKED` | `validateAcrossBridgeDirection` / B1 |
 | Hero 3 Audit Cert | `SHA256 · inFlight/settled · lostUsd=0` | `buildRobinhoodAuditSnapshot` / B2 |
 

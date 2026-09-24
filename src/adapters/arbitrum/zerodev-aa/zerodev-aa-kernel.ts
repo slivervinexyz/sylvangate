@@ -18,7 +18,8 @@ import { resolveArbitrumRpcUrl } from "./zerodev-aa-chain";
 export type ZeroDevViemChain = typeof arbitrum | typeof arbitrumNova | typeof arbitrumSepolia;
 
 /** ZeroDev Kernel v3 (ERC-7579 Modular Account) + ERC-4337 EntryPoint v0.7 canonical binding.
- *  v1.0: `plugins: { sudo }` only — TYPE-4 hook planned, enforced off-chain via risk-oracle-gate until V1.5 Track A. */
+ *  v1.0: `plugins: { sudo }` aligns with upstream KernelPluginManagerParams.sudo — TYPE-4 hook planned,
+ *  enforced off-chain via risk-oracle-gate until V1.5 Track A. */
 export const KERNEL_ENTRY_POINT = {
   address: ZERODEV_ENTRY_POINT_ADDRESS,
   version: ZERODEV_ENTRY_POINT_VERSION,

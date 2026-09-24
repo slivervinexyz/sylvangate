@@ -1,5 +1,5 @@
 /**
- * SKU-slim vitest setup — Robinhood Sentinel spin-off.
+ * SKU-slim vitest setup — SylvanGate SKU spin-off.
  * Avoid venue adapter / Arbitrum probe imports so across-ingress tests stay isolated.
  */
 import { afterEach, beforeEach, vi } from "vitest";

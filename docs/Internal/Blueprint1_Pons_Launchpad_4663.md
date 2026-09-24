@@ -1,6 +1,6 @@
 # Blueprint 1 — Retail DEX Guard · Pons Launchpad @ 4663
 
-**SKU:** `@slivervine/robinhood-sentinel-escort` · **Complement Module (decision-only)**  
+**SKU:** `@slivervine/sylvangate` · **Complement Module (decision-only)**  
 **Chain:** Robinhood Chain `4663` / `46630`  
 **Status:** Internal judge supplement — **not** a shipped hero path
 

@@ -107,7 +107,7 @@ Arbitrum Foundation Open House builder session introducing **Robinhood Chain** t
 
 ---
 
-## Relevance to SliverVine Robinhood Sentinel Escort SKU
+## Relevance to SliverVine SylvanGate SKU
 
 | Session topic | Repo alignment | Official docs citation |
 |---------------|----------------|------------------------|

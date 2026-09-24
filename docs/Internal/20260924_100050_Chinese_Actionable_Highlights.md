@@ -1,7 +1,7 @@
-# 中文精華 — 真係有用比我哋 Robinhood Sentinel Escort SKU
+# 中文精華 — 真係有用比我哋 SliverVine SylvanGate SKU
 
 **來源：** Arbitrum Open House × Robinhood Chain（Gaetan, ~51min）  
-**對照 repo：** [`README.md`](../../README.md) · `@slivervine/robinhood-sentinel-escort`  
+**對照 repo：** [`README.md`](../../README.md) · `@slivervine/sylvangate`  
 **日期：** 2026-09-24
 
 > 呢條片係 **ecosystem / GTM session**，冇講 Kernel、UserOp、4663。下面只抽 **同我哋 codebase 有直接關係** 嘅 actionable 精華。
@@ -12,7 +12,7 @@
 
 1. **Open House Singapore 申請截止 10月4日** — 片尾 Benjamin 明講；top teams 去 Founder House Singapore（10月23–25日）同 Robinhood 一齊。我哋 pitch 要 fit **RWA + democratizing finance**，唔係 generic DeFi meme。
 2. **話術三條對齊 README Hero paths：**
-   - **Hero 1 Kernel Escort** `4663 → 42161` — Gaetan 強調 Arbitrum 係 core technical partner；我哋 outbound escort 係順勢，唔係自創 narrative。
+   - **Hero 1 SylvanGate Pre-Sign Gate** `4663 → 42161` — Gaetan 強調 Arbitrum 係 core technical partner；我哋 outbound escort 係順勢，唔係自創 narrative。
    - **Hero 2 Permissioned Airlock** — 佢講 sanctioned wallet addresses、stock tokens 地域限制（US/CA/UK/CH 禁）；我哋 `AML_INBOUND_TO_ROBINHOOD_BLOCKED` 係 **chain-id boundary predicate**，唔係 sanctions scanner — judge 問就要 honest footnote。
    - **Hero 3 SHA-256 Audit Cert** — 佢唔會俾 legal advice，叫你去睇 official docs + prospectus；我哋 `buildRobinhoodAuditSnapshot` 係 **immutable decision artifact**，呢個 positioning 啱。
 3. **Run demo 順序：** `pnpm demo:robinhood-sentinel` → 三條 hero 一次過；live-fire 指去 `docs/logging/ROBINHOOD_LIVEFIRE_ARTIFACTS.md`，唔好 claim 片入面嘅 $75B DEX volume。
@@ -72,7 +72,7 @@
 
 ## 建議 Judge 30 秒版（中文草稿）
 
-> SliverVine Robinhood Sentinel Escort 係 Robinhood Chain（4663）上面嘅 **ZeroDev Kernel outbound intent gate**：資金只可以 **fail-closed 單向** escort 去 Arbitrum One（42161），inbound 喺 protocol layer 被 `AML_INBOUND_TO_ROBINHOOD_BLOCKED` 截斷；pending bridge capital 用 `lostUsd ≡ 0` invariant。三條 hero：`pnpm demo:robinhood-sentinel` — escort replay、airlock block、SHA-256 audit certificate；mainnet live-fire tx 有 archived explorer 證據，demo 唔 re-broadcast。
+> SliverVine SylvanGate 係 Robinhood Chain（4663）上面嘅 **ZeroDev AA Pre-Sign intent gate**：資金只可以 **fail-closed 單向** escort 去 Arbitrum One（42161），inbound 喺 protocol layer 被 `AML_INBOUND_TO_ROBINHOOD_BLOCKED` 截斷；pending bridge capital 用 `lostUsd ≡ 0` invariant。三條 hero：`pnpm demo:robinhood-sentinel` — escort replay、airlock block、SHA-256 audit certificate；mainnet live-fire tx 有 archived explorer 證據，demo 唔 re-broadcast。
 
 ---
 

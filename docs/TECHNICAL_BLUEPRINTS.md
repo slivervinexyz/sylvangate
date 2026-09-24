@@ -1,10 +1,10 @@
 # Technical Blueprints — Robinhood Chain (4663)
 
-**SKU:** `@slivervine/robinhood-sentinel-escort`  
+**SKU:** `@slivervine/sylvangate`  
 **Primary judge demo:** `pnpm demo:robinhood-sentinel` (Hero 1–3)
 
 Complement blueprints below are **decision-only** modules — not shipped hero paths.  
-Architecture: [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](./CROSS_CHAIN_ARCHITECTURE_FAQ.md)
+Architecture: [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](./CROSS_CHAIN_ARCHITECTURE_FAQ.md) · Roadmap: [docs/STRATEGIC_POST_HACKATHON_ROADMAP.md](./STRATEGIC_POST_HACKATHON_ROADMAP.md)
 
 ---
 
@@ -43,9 +43,30 @@ SliverVine maps this spec to existing Wasm infrastructure:
 | Probe type wrapper | `ZeroDevV4ConditionProbe` | `zerodev-aa-types.ts` |
 | Readiness flag | `ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY = true` | `zerodev-aa-constants.ts` |
 
+**Upstream terminology** (`@zerodev/sdk@5.5.10`):
+
+| Upstream concept | SliverVine |
+|------------------|------------|
+| Permission Policy (when) | `checkSoilResistance()` trip fuse |
+| `KernelValidatorHook` | off-chain pre-execution gate (`hookInstalled: false` honesty) |
+| Extendable Condition (v4 beta) | `ZeroDevV4ConditionProbe` |
+| `KERNEL_V3_1` | `ZERODEV_KERNEL_VERSION` |
+
 **Pre-bundle gate:** `ZeroDevV4ConditionProbe.evaluate(input)` runs the sub-microsecond Wasm soil reflex (`computeSoilSlippageMetrics` lane, p50 ~15µs) as an **off-chain / edge pre-condition** — if `tripped === true`, the UserOp never reaches the ZeroDev bundler. On pass, control falls through to the unchanged v3 path (`guardAgentUserOp` → Kernel 0.3.1 + EP 0.7).
 
-**Honesty:** `ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY` is an **interface-readiness declaration**, not a runtime switch. `pnpm demo:robinhood-sentinel` and live-fire probes continue on Kernel **v0.3.1**; v4 alignment is exported as a type spec + adapter constant for integrators targeting the beta-SDK.
+**Honesty:** v4 Extendable Condition types are **not yet published** in `@zerodev/sdk@5.5.10`; `ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY` is an **interface-readiness declaration**, not a runtime switch. `pnpm demo:robinhood-sentinel` and live-fire probes continue on Kernel **v0.3.1**; v4 alignment is exported as a type spec + adapter constant for integrators targeting the beta-SDK.
+
+#### Internal Note — Kernel v4 Type Interface SSOT
+
+Type definitions in [`zerodev-aa-types.ts`](../src/adapters/arbitrum/zerodev-aa/zerodev-aa-types.ts) position the Wasm engine for ZeroDev v4 beta-SDK condition modules:
+
+| Type | Role |
+|------|------|
+| `ZeroDevV4ConditionEvaluator` | `(SoilResistanceInput) => SoilResistanceResult` — 1:1 signature with `checkSoilResistance()` |
+| `ZeroDevV4ConditionProbe.evaluate` | Off-chain condition module bind point before bundler submission |
+| `ZeroDevV4ConditionVerdict.satisfied` | Maps `!soil.tripped` to upstream condition pass/fail |
+
+Integrators bind `evaluate: checkSoilResistance` from `risk-engine-soil.ts`. See [STRATEGIC_POST_HACKATHON_ROADMAP.md](./STRATEGIC_POST_HACKATHON_ROADMAP.md) Phase 1 for long-term SKU positioning.
 
 ---
 

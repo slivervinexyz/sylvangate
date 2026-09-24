@@ -1,12 +1,17 @@
+/** SliverVine SylvanGate (v1.0 SSRC) — ZeroDev AA adapter constants @ Robinhood Chain 4663. */
+import { KERNEL_NAME, KERNEL_V3_1, VALIDATOR_TYPE } from "@zerodev/sdk/constants";
 import { entryPoint07Address } from "viem/account-abstraction";
 import { ARBITRUM_ONE_CHAIN_ID } from "../../../sdk/constants";
 
 export { ARBITRUM_ONE_CHAIN_ID };
 export const ARBITRUM_NOVA_CHAIN_ID = 42170 as const;
-export const ZERODEV_KERNEL_VERSION = "0.3.1" as const;
+/** Active demo kernel — mirrors upstream KERNEL_V3_1 (0.3.1). */
+export const ZERODEV_KERNEL_VERSION = KERNEL_V3_1;
+/** Upstream SSOT re-exports for integrators. */
+export { KERNEL_V3_1, KERNEL_NAME, VALIDATOR_TYPE };
 /** ZeroDev Kernel v3 — ERC-7579 Modular Account · Ultra-Relay Intent Network (Pillar 1 opt-in). */
 export const ZERODEV_ULTRA_RELAY_INTENT_NETWORK = true as const;
-/** ZeroDev Kernel v4 Extendable Condition Interface readiness flag */
+/** ZeroDev Kernel v4 Extendable Condition Interface readiness flag — upstream npm has no KERNEL_V4 yet. */
 export const ZERODEV_KERNEL_V4_CONDITION_INTERFACE_READY = true as const;
 export const ZERODEV_ENTRY_POINT_VERSION = "0.7" as const;
 export const ZERODEV_ENTRY_POINT_ADDRESS = entryPoint07Address;

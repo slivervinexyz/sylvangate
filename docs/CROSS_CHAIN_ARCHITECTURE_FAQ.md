@@ -1,6 +1,6 @@
 # Cross-Chain Architecture FAQ — 4663 → 42161
 
-**SKU:** `@slivervine/robinhood-sentinel-escort`  
+**SKU:** `@slivervine/sylvangate`  
 **Audience:** Judges, integrators, red-team reviewers  
 **SSOT modules:** `treasury-escort-router.ts` · `treasury-escort-stub.ts` · `rchain-escort-attestation.ts` · `gmx-revenue.ts`
 

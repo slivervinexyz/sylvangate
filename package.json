@@ -1,7 +1,7 @@
 {
-  "name": "@slivervine/robinhood-sentinel-escort",
+  "name": "@slivervine/sylvangate",
   "version": "1.0.0",
-  "description": "SliverVine Kernel Escort for Robinhood Chain — ZeroDev Kernel Intent-Gate & Outbound Capital Escort (4663 / 46630)",
+  "description": "SliverVine SylvanGate — ZeroDev AA Pre-Sign Intent Gate for Robinhood Chain (4663 / 46630)",
   "private": true,
   "type": "module",
   "scripts": {
@@ -21,6 +21,7 @@
     "@types/node": "^22.7.5",
     "@vitest/coverage-v8": "^3.2.4",
     "esbuild": "^0.25.9",
+    "sharp": "^0.35.4",
     "solhint": "^6.2.4",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",

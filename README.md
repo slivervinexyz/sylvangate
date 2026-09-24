@@ -1,25 +1,40 @@
-# SliverVine Kernel Escort for Robinhood Chain (Chain ID: 4663)
+# SliverVine SylvanGate for Robinhood Chain (Chain ID: 4663)
 
-**Home Chain: Robinhood Chain (4663 / 46630)** — ZeroDev Kernel Account Intent-Gate & Outbound Capital Escort.
+[![Vitest](https://img.shields.io/badge/Vitest-6%2F6%20PASS%20%281%20file%29-brightgreen?logo=vitest)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![Home Chain](https://img.shields.io/badge/Home%20Chain-Robinhood%204663%2F46630-blue?logo=ethereum)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![ZeroDev](https://img.shields.io/badge/ZeroDev-Kernel_v0.3.1_%C2%B7_EP_0.7-blueviolet?logo=ethereum)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![Wasm Reflex](https://img.shields.io/badge/Wasm%20Reflex-p50__15%CE%BCs-blue?logo=speedtest)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![Demo](https://img.shields.io/badge/demo%3Arobinhood--sentinel-ALL%20PATHS%20PASS-brightgreen?logo=pnpm)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![TypeScript](https://img.shields.io/badge/TypeScript-0%20errors-blue?logo=typescript)](https://github.com/SilverVineLabs/slivervine-sylvangate)
+[![License](https://img.shields.io/badge/License-BUSL--1.1-orange)](./LICENSE)
+[![Package](https://img.shields.io/badge/npm-%40slivervine%2Fsylvangate-lightgrey?logo=npm)](https://github.com/SilverVineLabs/slivervine-sylvangate)
 
-Standalone SKU (`@slivervine/robinhood-sentinel-escort`) for the Robinhood Chain reserved slot. Kernel accounts on Robinhood Chain sponsor outbound UserOps toward Arbitrum One (`42161`) under a fail-closed intent gate. Inbound routes are blocked by a **Permissioned Airlock** (chain-id boundary predicate). Pending capital never books phantom loss (`lostUsd ≡ 0`).
+<p align="center">
+  <img src="./public/brand/sylvangate-hero.webp" alt="SliverVine SylvanGate Hero Guard" width="100%" />
+</p>
+
+**Home Chain: Robinhood Chain (4663 / 46630)** — ZeroDev AA Pre-Sign Intent Gate & Outbound Capital Escort.
+
+Part of the SliverVine Holy Trinity: **SylvanGate** · **ExoMesh** · **Sanctuary**.
+
+Standalone SKU (`@slivervine/sylvangate`) for the Robinhood Chain reserved slot. Kernel accounts on Robinhood Chain sponsor outbound UserOps toward Arbitrum One (`42161`) under a fail-closed intent gate. Inbound routes are blocked by a **Permissioned Airlock** (chain-id boundary predicate). Pending capital never books phantom loss (`lostUsd ≡ 0`).
 
 ## 🚀 Quickstart & Installation
 
-**Package:** `@slivervine/robinhood-sentinel-escort` · Home chain `4663` / `46630`
+**Package:** `@slivervine/sylvangate` · Home chain `4663` / `46630`
 
 ### Install (integrators)
 
 ```bash
-pnpm add @slivervine/robinhood-sentinel-escort
-# or: npm install @slivervine/robinhood-sentinel-escort
+pnpm add @slivervine/sylvangate
+# or: npm install @slivervine/sylvangate
 ```
 
 > This repo is currently `private` — judges and integrators should **clone** and install locally until the package is published:
 
 ```bash
-git clone https://github.com/SilverVineLabs/slivervine-kernel-escort-rhchain.git
-cd slivervine-kernel-escort-rhchain && pnpm install
+git clone https://github.com/SilverVineLabs/slivervine-sylvangate.git
+cd slivervine-sylvangate && pnpm install
 ```
 
 ### TypeScript — intent guard @ 4663
@@ -27,12 +42,13 @@ cd slivervine-kernel-escort-rhchain && pnpm install
 `checkSoilResistance()` trips on slippage/depth fuse and calls `applySoilTripSeverance(true)` internally (`risk-engine-soil.ts` L76) — **0-Gas** before sign:
 
 ```typescript
-import { checkSoilResistance } from "./src/core/risk-engine-soil";
-import type { SoilResistanceInput } from "./src/core/soil-resistance-types";
-import { ROBINHOOD_MAINNET_CHAIN_ID } from "./src/sdk/constants";
+import { checkSoilResistance, applySoilTripSeverance } from "@slivervine/sylvangate";
+import type { SoilResistanceInput } from "@slivervine/sylvangate";
+import { ROBINHOOD_MAINNET_CHAIN_ID } from "@slivervine/sylvangate";
 
 const intent: SoilResistanceInput = { symbol: "PONS", chainId: ROBINHOOD_MAINNET_CHAIN_ID, hlSpot: 1, hlPerp: 1, dydxPerp: 1.15, orderSizeUsd: 1000, maxSlippage: 0.01, at: new Date() };
 const verdict = checkSoilResistance(intent);
+if (verdict.tripped) applySoilTripSeverance(true);
 if (verdict.tripped) throw new Error(`0-Gas reject — severed before sign (${verdict.reasons.join(",")})`);
 ```
 
@@ -49,7 +65,7 @@ pnpm test                      # across-ingress-bridge 6/6
 
 `pnpm demo:robinhood-sentinel` executes all three paths sequentially:
 
-### Hero 1 — Kernel Escort (Home Chain 4663)
+### Hero 1 — SylvanGate Pre-Sign Gate (Home Chain 4663)
 
 - ZeroDev Kernel v3 + EntryPoint 0.7 intent-gate constants
 - Outbound escort replay: `4663 → 42161`
@@ -107,13 +123,13 @@ Verifiable capital-safety feed for Robinhood Chain traders — maps audit snapsh
 - Example feed line: `[HYPERDASH-RISK-FEED] chain=4663 | Inbound Airlock ACTIVE | In-Flight $100 | lostUsd=0 | SHA256 Cert: c989668...`
 - Live-fire: [B1 airlock](./docs/logging/robinhood_livefire_inbound_block_2026-09-21T01-54-27-239380566Z.json) · [B2 audit](./docs/logging/robinhood_livefire_inbound_audit_2026-09-21T02-09-39-263Z.json) · [A-Tier2-mainnet](./docs/logging/robinhood_livefire_outbound_2026-09-21T03-00-51-080Z.json) (`bridgeDeployed: false`)
 - **Not** Hyperdash integration · **not** websocket feed · **not** wallet middleware
-- Primary SKU remains Kernel Escort + Airlock + Audit Certificate (`pnpm demo:robinhood-sentinel`)
+- Primary SKU remains SylvanGate + Airlock + Audit Certificate (`pnpm demo:robinhood-sentinel`)
 
 ## Architecture & Honesty Boundaries
 
 For a detailed technical breakdown of our 4663 → 42161 cross-chain intent attestation and contract deployment status, see [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md).
 
-⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks.
+⚡ **ZeroDev v4 Roadmap Ready**: Native compatibility layer for ZeroDev Kernel v4 Extendable Condition Interface (beta-SDK), enabling dynamic sub-microsecond soil resistance checks. Aligns with `@zerodev/sdk` Permissions (Signers/Policies/Actions) and Kernel v4 Extendable Condition Interface (beta-SDK).
 
 ## Honest footnotes
 
@@ -133,9 +149,9 @@ For a detailed technical breakdown of our 4663 → 42161 cross-chain intent atte
 
 This repository is a dedicated, standalone SKU built specifically for **Robinhood Chain (Chain ID: 4663 Mainnet / 46630 Testnet)**.
 
-It extracts and refines the **4663 ZeroDev Kernel Escort**, **Permissioned Inbound Airlock**, and **SHA-256 Audit Snapshot** from our flagship [SliverVine Protocol Monorepo](https://github.com/SilverVineLabs/bedelta-living-water).
+It extracts and refines the **4663 SylvanGate Pre-Sign Gate**, **Permissioned Inbound Airlock**, and **SHA-256 Audit Snapshot** from our flagship [SliverVine Protocol Monorepo](https://github.com/SilverVineLabs/bedelta-living-water).
 
-| | This SKU (`@slivervine/robinhood-sentinel-escort`) | Flagship monorepo (`bedelta-living-water`) |
+| | This SKU (`@slivervine/sylvangate`) | Flagship monorepo (`bedelta-living-water`) |
 |---|---------------------------------------------------|---------------------------------------------|
 | **Scope** | Robinhood-native escort decision layer only | Full Citadel gateway — GMX, Worker ingress, multi-venue soil matrix |
 | **Tests** | **6/6 PASS** — `tests/adapters/across-ingress-bridge.test.ts` | Full Vitest suite (monorepo-wide) |
