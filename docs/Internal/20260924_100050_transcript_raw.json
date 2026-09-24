@@ -1,0 +1,1955 @@
+{
+  "source": "docs/Internal/assest/20260924_100050_Export.MP3",
+  "model": "medium",
+  "language": "en",
+  "duration_sec": 3060.075,
+  "transcribed_at": "2026-09-24T04:16:21.168941Z",
+  "segment_count": 389,
+  "segments": [
+    {
+      "start": 80.82,
+      "end": 97.2,
+      "text": "GM everyone, thanks for joining. Let's give it a couple more minutes for a few more people to join, then we can probably get started."
+    },
+    {
+      "start": 97.2,
+      "end": 109.2,
+      "text": "In the meantime, feel free to drop in the chat where you're from, where you're joining from, who your team is, what you're building, or what you're interested in building."
+    },
+    {
+      "start": 109.2,
+      "end": 148.22,
+      "text": "We will start in three, I think two more minutes while we have people from Australia, Portugal, Ohio, Hong Kong, anyone else based in the Asian time zone?"
+    },
+    {
+      "start": 154.98,
+      "end": 215.54,
+      "text": "Sweet. Let's see how many people have joined. Yeah, I think we can get it started."
+    },
+    {
+      "start": 215.54,
+      "end": 225.54,
+      "text": "But yeah, so hi everyone and welcome. Huge shout out to you guys. Thanks for taking the time to join us today."
+    },
+    {
+      "start": 225.54,
+      "end": 238.04,
+      "text": "Out of different time zones, out of different countries, so it's a really huge effort for you guys to show up. So from the team, a huge thank you to you guys."
+    },
+    {
+      "start": 238.04,
+      "end": 249.04,
+      "text": "For those who don't know me, I'm Benjamin from the Builder Growth team at the Irishman Foundation. I've been with the foundation for close to two years now."
+    },
+    {
+      "start": 249.04,
+      "end": 266.04,
+      "text": "And currently I lead all the content and social efforts across the open house program. So whatever you see on socials, the different founders that we are spotlighting as well on our main account, that's all done by us."
+    },
+    {
+      "start": 266.04,
+      "end": 281.04,
+      "text": "So today we are really excited to host a session with Robinhood Chain just to learn more about what the team is building and how you guys, how founders and builders can also get involved in the ecosystem."
+    },
+    {
+      "start": 281.04,
+      "end": 291.04,
+      "text": "So before we begin, I just want to give a quick reminder, keep yourself muted during the whole presentation to ensure a smooth experience for everyone."
+    },
+    {
+      "start": 291.04,
+      "end": 309.04,
+      "text": "We'll also have time for questions at the end, so you guys can prepare accordingly. With that, I'm also going to introduce our guest speaker today, Gaetan, which is the Director of Crypto Partnerships at Robinhood Chain."
+    },
+    {
+      "start": 309.04,
+      "end": 324.04,
+      "text": "Gaetan works really closely with builders, partners, founders and teams across the ecosystem. And today he'll be sharing more about the Robinhood Chain and the opportunities for developers and founders."
+    },
+    {
+      "start": 324.04,
+      "end": 332.04,
+      "text": "We're really thrilled to have you today with us, Gaetan. Thanks for joining us. The stage is yours."
+    },
+    {
+      "start": 332.04,
+      "end": 346.04,
+      "text": "Yeah, thank you, Benjamin. And hi to everybody, wherever you are in the world. I'm currently in Chicago and so it's my time, but super excited to be here with you all."
+    },
+    {
+      "start": 346.04,
+      "end": 360.04,
+      "text": "I think I wanted to take the time to maybe, you know, go through a few slides of presentation of what Robinhood is, where we are, what we've done and, you know, the traction we've seen and where we want to go."
+    },
+    {
+      "start": 360.04,
+      "end": 376.04,
+      "text": "And obviously I want to, I want to also, more importantly, leave some time for questions and be able to, yeah, understand what would be most valuable and helpful for you all and answer them to the extent that I can."
+    },
+    {
+      "start": 376.04,
+      "end": 393.3,
+      "text": "So if that will start presenting the few slides that I have."
+    },
+    {
+      "start": 393.3,
+      "end": 402.3,
+      "text": "All right. Benjamin, does that look good for everybody, you think? Yeah, we can all see. Awesome. Okay, great."
+    },
+    {
+      "start": 402.3,
+      "end": 415.3,
+      "text": "All right. So, you know, at Robinhood, we always start at all hands with company-wide all hands, where our CEO typically starts by opening it and ask everybody, what's the mission?"
+    },
+    {
+      "start": 415.3,
+      "end": 435.3,
+      "text": "And the mission is democratizing finance for all. That's what the company was built for. That's what we're all striving for from the securities business, derivative business, or the on-chain more crypto, you know, side of the house at Robinhood."
+    },
+    {
+      "start": 435.3,
+      "end": 443.3,
+      "text": "Why was the chain created? The chain and the tokenization effort is born out of a necessity."
+    },
+    {
+      "start": 443.3,
+      "end": 456.3,
+      "text": "You know, if a company who operates a licensed business like Robinhood wants to enter new markets, there's basically two options, which are two really good options and two options that we're taking."
+    },
+    {
+      "start": 456.3,
+      "end": 468.3,
+      "text": "One is going country by country and getting licenses and, you know, offering licensed services."
+    },
+    {
+      "start": 468.3,
+      "end": 490.3,
+      "text": "And the second option is to reach out to anybody who has an internal connection, who is not part of, you know, sanctioned countries or sanctioned wallet addresses, but wants to leverage a custodial non-custodial wallet and access services and products that we can offer through the blockchain technology."
+    },
+    {
+      "start": 490.3,
+      "end": 507.3,
+      "text": "And that's kind of why we we launch, you know, the Robinhood chain on July 1st. So almost exactly three months ago, in one week, it will be three months, with the idea that we wanted to own our destiny."
+    },
+    {
+      "start": 507.3,
+      "end": 521.3,
+      "text": "We wanted to be able to, you know, be accountable and for the end-to-end stack and being able to deliver services that would be really, really exciting for the community."
+    },
+    {
+      "start": 521.3,
+      "end": 545.3,
+      "text": "But also we built a chain that had a few properties, which was to be permissionless, open and making sure that, you know, everybody can essentially benefit and contribute at the same time from that ecosystem and the assets and the liquidity that we will, you know, bring on chain."
+    },
+    {
+      "start": 545.3,
+      "end": 549.3,
+      "text": "So that's kind of like what the chain was designed for."
+    },
+    {
+      "start": 549.3,
+      "end": 568.3,
+      "text": "Obviously, we're seeing a lot of activity through, you know, AI agents on the chain, but also the big elephant in the room, RWAs, which one of the key products that we started with are stock tokens."
+    },
+    {
+      "start": 568.3,
+      "end": 581.3,
+      "text": "So they're, you know, security-backed, debt-backed securities that are tokenized on chains and that we started with about 100 instruments."
+    },
+    {
+      "start": 581.3,
+      "end": 594.3,
+      "text": "So, you know, large market cap stock tokens and we move quickly to 200 and we'll keep increasing that number over time in the next few months."
+    },
+    {
+      "start": 594.3,
+      "end": 599.3,
+      "text": "So where are we as of, you know, a few weeks ago?"
+    },
+    {
+      "start": 599.3,
+      "end": 605.3,
+      "text": "These were the volumes of the chain at the beginning of the month."
+    },
+    {
+      "start": 605.3,
+      "end": 618.3,
+      "text": "We saw over $30 billion of DEX volumes. As a matter of fact, I think as of today, we crossed $75 billion. So in one month, we have more than doubled that number."
+    },
+    {
+      "start": 618.3,
+      "end": 627.3,
+      "text": "The protocol TVL is at close to $1.6 billion now. And as I mentioned, we're close to $200 stock token live."
+    },
+    {
+      "start": 627.3,
+      "end": 642.3,
+      "text": "Millions of transactions, addresses, and outside of spot trading, Perps are also taking off through a really cool partnership with Leiter, which I can speak about if that's interesting."
+    },
+    {
+      "start": 642.3,
+      "end": 655.3,
+      "text": "So, yes, some of the numbers that you guys can see, and I invite you all to check out this app data dashboard that was built by our friends at Entropy Advisors,."
+    },
+    {
+      "start": 655.3,
+      "end": 669.3,
+      "text": "Who have been amazing partners and who provide incredible insights into the life of the chain, both from an asset, from a liquidity and, you know, from a user perspective."
+    },
+    {
+      "start": 669.3,
+      "end": 677.3,
+      "text": "So really cool details to be seen if you haven't checked out the Entropy dashboard."
+    },
+    {
+      "start": 677.3,
+      "end": 688.3,
+      "text": "One of the other aspects of Robinhood chain is the Robinhood wallet. And, you know, I've been asked a lot of time, like, why do we have this wallet?"
+    },
+    {
+      "start": 688.3,
+      "end": 692.3,
+      "text": "And like, what's the relationship between the wallet and the chain?"
+    },
+    {
+      "start": 692.3,
+      "end": 705.3,
+      "text": "And so, you know, I wanted to say that the reason we have this wallet is that we want to be able to also experiment in terms of the experience that we can provide to users in the community."
+    },
+    {
+      "start": 705.3,
+      "end": 714.3,
+      "text": "And owning your own wallet is a really good way to do that. It means you own the roadmap, you own the features, you own the experience end to end."
+    },
+    {
+      "start": 714.3,
+      "end": 728.3,
+      "text": "And that's kind of very much in the mentality of Robinhood is to, you know, offer design UX that are really user friendly and user focused."
+    },
+    {
+      "start": 728.3,
+      "end": 735.3,
+      "text": "And so that's part of the reason why the wallet has such an interesting and important place as part of our strategy."
+    },
+    {
+      "start": 735.3,
+      "end": 750.3,
+      "text": "Another product that we launched is the Robinhood Earn. It is a vault that allows our American users or eligible American users, I should say, not everybody in the US has access to it."
+    },
+    {
+      "start": 750.3,
+      "end": 756.3,
+      "text": "Unfortunately, we're working on it to make it accessible to as many folks as possible."
+    },
+    {
+      "start": 756.3,
+      "end": 771.3,
+      "text": "To the ability to lend on chain their USDG and very easily convert cash to USDG to then being able to access a net API based on that."
+    },
+    {
+      "start": 771.3,
+      "end": 778.3,
+      "text": "I invite you to look, you know, on public communication, more details around the product."
+    },
+    {
+      "start": 778.3,
+      "end": 783.3,
+      "text": "But that was really cool, a cool one that we launched July 1st."
+    },
+    {
+      "start": 783.3,
+      "end": 791.3,
+      "text": "And in less than three months, we're almost shy of $500 million, which has been really exciting to see."
+    },
+    {
+      "start": 791.3,
+      "end": 796.3,
+      "text": "And this is hopefully going to keep growing."
+    },
+    {
+      "start": 796.3,
+      "end": 802.3,
+      "text": "And then another product I wanted to highlight is obviously the stock tokens."
+    },
+    {
+      "start": 802.3,
+      "end": 812.3,
+      "text": "Stock tokens, as I mentioned, are, you know, debt backed securities that are tokenized on chain."
+    },
+    {
+      "start": 812.3,
+      "end": 828.3,
+      "text": "And the purpose here is to give access to folks who can't, in certain jurisdictions, access global equity, single stocks, commodities, ETPs, ETFs,."
+    },
+    {
+      "start": 828.3,
+      "end": 838.3,
+      "text": "In a way that is as seamless and simple as possible where you have $1 or $1 million and you want to benefit from the growth of these of these assets."
+    },
+    {
+      "start": 838.3,
+      "end": 851.3,
+      "text": "So some metrics that, you know, as of I think this is two days ago, we've now bumped close to over 200 tokens."
+    },
+    {
+      "start": 851.3,
+      "end": 859.3,
+      "text": "We were seeing 170 million of tokenized value, close to 200,000 unique holders."
+    },
+    {
+      "start": 859.3,
+      "end": 873.3,
+      "text": "Based on the definition of the entropy advisors, you know, dashboard, there's a lot of different definitions of what a holder is, depending on the analytic teams that works on that."
+    },
+    {
+      "start": 873.3,
+      "end": 878.3,
+      "text": "We consider a wallet with a lot of different stocks, only one user."
+    },
+    {
+      "start": 878.3,
+      "end": 886.3,
+      "text": "We don't consider every stock a new user, which some other metrics like tech as an account, a unit of accounts."
+    },
+    {
+      "start": 886.3,
+      "end": 897.3,
+      "text": "But in any cases, we see growth across, you know, all these different metrics, holders, value tokenized and also trading of these assets,."
+    },
+    {
+      "start": 897.3,
+      "end": 908.3,
+      "text": "Which means that the flywheel of creating utility, attracting users and liquidity is starting to take off."
+    },
+    {
+      "start": 908.3,
+      "end": 919.3,
+      "text": "And from there, it's our job to keep pushing and keep developing the depth of this liquidity across seven days a week, which is a big challenge."
+    },
+    {
+      "start": 919.3,
+      "end": 923.3,
+      "text": "And we're like heads on trying to address that."
+    },
+    {
+      "start": 923.3,
+      "end": 926.3,
+      "text": "And secondly, the utility around the stock tokens."
+    },
+    {
+      "start": 926.3,
+      "end": 932.3,
+      "text": "So today, the primary market is permission."
+    },
+    {
+      "start": 932.3,
+      "end": 936.3,
+      "text": "You can only access it if you are a kawaii bid entity."
+    },
+    {
+      "start": 936.3,
+      "end": 942.3,
+      "text": "And there is dozens of liquidity providers and, you know, corporates who have access to that."
+    },
+    {
+      "start": 942.3,
+      "end": 952.3,
+      "text": "And a lot of their jobs and their functions is ultimately also to be able to trade that on chain in a permissionlessly tradable way."
+    },
+    {
+      "start": 952.3,
+      "end": 967.3,
+      "text": "So we see increased activity on, you know, DEXs who are accepting and complying with the rules around stock tokens, which is really exciting to see."
+    },
+    {
+      "start": 967.3,
+      "end": 972.3,
+      "text": "None of that will be possible without an amazing ecosystem."
+    },
+    {
+      "start": 972.3,
+      "end": 977.3,
+      "text": "This is, by the way, this ecosystem has grown by a lot."
+    },
+    {
+      "start": 977.3,
+      "end": 983.3,
+      "text": "This is a picture I took from our July 1st announcement."
+    },
+    {
+      "start": 983.3,
+      "end": 991.3,
+      "text": "And I think in the next three months, we've probably more than doubled the number of logos and partners in various categories that exist."
+    },
+    {
+      "start": 991.3,
+      "end": 1001.3,
+      "text": "We're super honored to have so many amazing partners coming along the ride and seeing value in deploying and supporting the chain."
+    },
+    {
+      "start": 1001.3,
+      "end": 1027.3,
+      "text": "And that is also, you know, reinforcing our vision that there is a spot for a lot of different players here to be able to bring on chain new users and keep attracting or developing really high quality and, you know, highly valuable products and services."
+    },
+    {
+      "start": 1027.3,
+      "end": 1030.3,
+      "text": "So I'll stop here. I don't want to make it too long and boring."
+    },
+    {
+      "start": 1030.3,
+      "end": 1036.3,
+      "text": "I think the most interesting will be questions, but I wanted to tell you, we obviously have docs."
+    },
+    {
+      "start": 1036.3,
+      "end": 1040.3,
+      "text": "We have technical docs as well."
+    },
+    {
+      "start": 1040.3,
+      "end": 1049.3,
+      "text": "And we have, you know, an email if you ever want to reach out to the team that builds this chain and try to develop it."
+    },
+    {
+      "start": 1049.3,
+      "end": 1052.3,
+      "text": "I would be remiss if I didn't say that."
+    },
+    {
+      "start": 1052.3,
+      "end": 1059.3,
+      "text": "Obviously, we work very closely with the Arbitrum team and the off-chain team."
+    },
+    {
+      "start": 1059.3,
+      "end": 1067.3,
+      "text": "We're a core technical partner for this adventure and the tokenization efforts that we have."
+    },
+    {
+      "start": 1067.3,
+      "end": 1070.3,
+      "text": "So big kudos to them and thank you, obviously, for the partnership."
+    },
+    {
+      "start": 1070.3,
+      "end": 1076.3,
+      "text": "And yeah, with that, I'll leave the floor to answer any question that anybody may have."
+    },
+    {
+      "start": 1076.3,
+      "end": 1086.94,
+      "text": "Benjamin, how should I take them? Just whatever I want?"
+    },
+    {
+      "start": 1086.94,
+      "end": 1091.94,
+      "text": "Yeah, whichever order you think is best for you."
+    },
+    {
+      "start": 1091.94,
+      "end": 1092.94,
+      "text": "Sounds good."
+    },
+    {
+      "start": 1092.94,
+      "end": 1099.94,
+      "text": "Romain, I think you were the first to raise your hand, so I'll give you the mic first."
+    },
+    {
+      "start": 1099.94,
+      "end": 1103.94,
+      "text": "Thank you, Gaetan, and congrats on the growth first."
+    },
+    {
+      "start": 1103.94,
+      "end": 1109.94,
+      "text": "My question is, where does this growth come from?"
+    },
+    {
+      "start": 1109.94,
+      "end": 1120.94,
+      "text": "Is it directly users from the app or is it coming from people that are migrating and bridging to Hovenhoed?"
+    },
+    {
+      "start": 1120.94,
+      "end": 1129.94,
+      "text": "Yeah, so what I can tell you is the app has one main way."
+    },
+    {
+      "start": 1129.94,
+      "end": 1132.94,
+      "text": "Well, I guess there's two ways for users of the app."
+    },
+    {
+      "start": 1132.94,
+      "end": 1137.94,
+      "text": "And there's about, you know, 27 million funded accounts on this application."
+    },
+    {
+      "start": 1137.94,
+      "end": 1143.94,
+      "text": "There's two primary ways for them to in very seamless way interact with the chain."
+    },
+    {
+      "start": 1143.94,
+      "end": 1150.94,
+      "text": "One is Robinhood Earn as a product is directly integrated in the app."
+    },
+    {
+      "start": 1150.94,
+      "end": 1161.94,
+      "text": "So if you're a US customer in eligible states, so that's currently excluding New York and Texas."
+    },
+    {
+      "start": 1161.94,
+      "end": 1171.94,
+      "text": "But outside of these two states, every eligible user has access to the earn product and can very, very seamlessly."
+    },
+    {
+      "start": 1171.94,
+      "end": 1189.94,
+      "text": "I'm actually a power user of that product myself and very seamlessly being able to access the on chain lending product that is created by Stakehouse and supported by Morpho as an on chain protocol."
+    },
+    {
+      "start": 1189.94,
+      "end": 1194.94,
+      "text": "So that's one way where we see brand new users."
+    },
+    {
+      "start": 1194.94,
+      "end": 1204.94,
+      "text": "And I think there was actually an interesting tweet from the CEO of Alchemy was mentioning that in September, 40 percent of new developers were on Robinhood chain."
+    },
+    {
+      "start": 1204.94,
+      "end": 1208.94,
+      "text": "So we're seeing new developers and new users coming on the chain."
+    },
+    {
+      "start": 1209.94,
+      "end": 1222.94,
+      "text": "The second one that I would mention is we have a product that allows every of these app users to move their phones to the Robinhood non-cashier wallet in one click."
+    },
+    {
+      "start": 1222.94,
+      "end": 1228.94,
+      "text": "And that has definitely with the launch of the chain that activity has picked up."
+    },
+    {
+      "start": 1228.94,
+      "end": 1240.94,
+      "text": "That being said, of the 24 million addresses that we've seen interacting with the chain, 98 percent are not from the app."
+    },
+    {
+      "start": 1240.94,
+      "end": 1254.94,
+      "text": "So there's still a lot of users that we need to convince and see come on the chain to make that number grow."
+    },
+    {
+      "start": 1254.94,
+      "end": 1264.94,
+      "text": "It's still yet exciting to see the number of even outside of the app developers that comes to blockchain for the first time and interact with Robinhood chain."
+    },
+    {
+      "start": 1264.94,
+      "end": 1274.22,
+      "text": "All right, Derek, I see you. Sorry for everybody else, but you're the first that I'm seeing."
+    },
+    {
+      "start": 1274.22,
+      "end": 1278.22,
+      "text": "Hi, thank you so much for your presentation."
+    },
+    {
+      "start": 1278.22,
+      "end": 1280.22,
+      "text": "I have two questions."
+    },
+    {
+      "start": 1280.22,
+      "end": 1288.22,
+      "text": "The first one is, like you said, there are about 200 stocks currently tokenized."
+    },
+    {
+      "start": 1288.22,
+      "end": 1297.22,
+      "text": "And is it possible to request Robinhood to tokenize more stocks, especially, for example, like long-tail stocks?"
+    },
+    {
+      "start": 1297.22,
+      "end": 1301.22,
+      "text": "Like if that's the case, who should we talk to?"
+    },
+    {
+      "start": 1301.22,
+      "end": 1309.22,
+      "text": "Because, for example, one of our clients is trying to tokenize their stock, which is like more like long-tail stock."
+    },
+    {
+      "start": 1309.22,
+      "end": 1313.22,
+      "text": "And they are trying different solutions like DTC solutions."
+    },
+    {
+      "start": 1313.22,
+      "end": 1315.22,
+      "text": "That's my first question."
+    },
+    {
+      "start": 1315.22,
+      "end": 1330.22,
+      "text": "And then the second question is, would Robinhood chain or foundation release sort of like liquidity support for the new DeFi protocols in the future?"
+    },
+    {
+      "start": 1330.22,
+      "end": 1333.22,
+      "text": "Thanks for your questions."
+    },
+    {
+      "start": 1333.22,
+      "end": 1336.22,
+      "text": "Let's start with the second."
+    },
+    {
+      "start": 1336.22,
+      "end": 1338.22,
+      "text": "So we're not a foundation."
+    },
+    {
+      "start": 1338.22,
+      "end": 1340.22,
+      "text": "We don't have a foundation."
+    },
+    {
+      "start": 1340.22,
+      "end": 1342.22,
+      "text": "You may have heard we don't have a token."
+    },
+    {
+      "start": 1342.22,
+      "end": 1350.22,
+      "text": "So what we do is we are professional of trading."
+    },
+    {
+      "start": 1350.22,
+      "end": 1366.22,
+      "text": "And so we've been supporting primarily the stock tokens through some liquidity support, but also fostering adoption across a lot of different forms."
+    },
+    {
+      "start": 1366.22,
+      "end": 1376.22,
+      "text": "We are not providing funding or incentives or grants to particular projects outside of the builders programs that we have."
+    },
+    {
+      "start": 1376.22,
+      "end": 1399.22,
+      "text": "So, for example, this open house is a very good example of that, where obviously Robinhood is a strong participant in the program and wants the builders who are selected and chosen for their merits to be supported, not just technically, but also financially."
+    },
+    {
+      "start": 1399.22,
+      "end": 1405.22,
+      "text": "So we've made that investment and that commitment."
+    },
+    {
+      "start": 1405.22,
+      "end": 1412.22,
+      "text": "And then for your first questions about long-term assets, it is a bit of a tricky one."
+    },
+    {
+      "start": 1412.22,
+      "end": 1418.22,
+      "text": "And the reason is, I would respond in two parts."
+    },
+    {
+      "start": 1418.22,
+      "end": 1425.22,
+      "text": "The first part is we are going to expand to a lot more number of instruments."
+    },
+    {
+      "start": 1425.22,
+      "end": 1427.22,
+      "text": "So today we have about 200."
+    },
+    {
+      "start": 1427.22,
+      "end": 1431.22,
+      "text": "We aim to get to 500, 1000 and plus."
+    },
+    {
+      "start": 1431.22,
+      "end": 1436.22,
+      "text": "So it is part of our own map to increase that."
+    },
+    {
+      "start": 1436.22,
+      "end": 1448.22,
+      "text": "The reason we're not doing that overnight is there is a liquidity aspect to adding new instruments."
+    },
+    {
+      "start": 1448.22,
+      "end": 1455.22,
+      "text": "Actually having decent liquidity during market hours, outside of market hours and during the weekend."
+    },
+    {
+      "start": 1455.22,
+      "end": 1463.22,
+      "text": "And so the more instruments we have, the more liquidity needs to exist to make them available."
+    },
+    {
+      "start": 1463.22,
+      "end": 1471.22,
+      "text": "So when we add new stock tokens to our supported list, we look at market cap."
+    },
+    {
+      "start": 1471.22,
+      "end": 1475.22,
+      "text": "We look at how much demand there is for the underlying."
+    },
+    {
+      "start": 1475.22,
+      "end": 1486.22,
+      "text": "We look at a lot of different aspects that then have consequences from an operational standpoint, once we have listed them."
+    },
+    {
+      "start": 1486.22,
+      "end": 1494.22,
+      "text": "The smaller the market cap, the more likely there is to have a corporate event, which then creates a complexity on chain,."
+    },
+    {
+      "start": 1494.22,
+      "end": 1500.22,
+      "text": "Which we've tried to simplify and make it as automated and transparent as possible."
+    },
+    {
+      "start": 1500.22,
+      "end": 1510.22,
+      "text": "But it's still like logistics that can become complex over time if there's too many of these events quickly."
+    },
+    {
+      "start": 1510.22,
+      "end": 1519.22,
+      "text": "So there are considerations that we have to take in order to move forward with these long tail assets."
+    },
+    {
+      "start": 1519.22,
+      "end": 1522.22,
+      "text": "But this is something we will consider over time."
+    },
+    {
+      "start": 1522.22,
+      "end": 1528.22,
+      "text": "Thank you. But just to follow up your first explanation."
+    },
+    {
+      "start": 1528.22,
+      "end": 1537.22,
+      "text": "You said Robinhood chain is looking for some sort of new financial protocols."
+    },
+    {
+      "start": 1537.22,
+      "end": 1543.22,
+      "text": "Can you explain more about what exactly Robinhood chain is looking for right now?"
+    },
+    {
+      "start": 1543.22,
+      "end": 1549.54,
+      "text": "I don't remember saying we are looking for new financial protocols."
+    },
+    {
+      "start": 1549.54,
+      "end": 1555.54,
+      "text": "Like, for example, the open house. You said you made a commitment to the open house."
+    },
+    {
+      "start": 1555.54,
+      "end": 1562.54,
+      "text": "And if, for example, a protocol or whatever is in line with the interests of Robinhood chain."
+    },
+    {
+      "start": 1562.54,
+      "end": 1566.54,
+      "text": "Yeah. So there is a committee for that."
+    },
+    {
+      "start": 1566.54,
+      "end": 1574.54,
+      "text": "But the vision of Robinhood chain is really focusing around RWA and democratizing finance for all."
+    },
+    {
+      "start": 1574.54,
+      "end": 1580.54,
+      "text": "If it fits in that vision and short tractions and has potential, I think there will be interest."
+    },
+    {
+      "start": 1580.54,
+      "end": 1584.54,
+      "text": "Thank you. Awesome."
+    },
+    {
+      "start": 1584.54,
+      "end": 1589.54,
+      "text": "All right. I'm going to just quickly look at what's in the chat so I can also go through that."
+    },
+    {
+      "start": 1589.54,
+      "end": 1595.54,
+      "text": "Adrian Casso, you're saying I thought Robinhood's big advantage was compliance with the American market."
+    },
+    {
+      "start": 1595.54,
+      "end": 1598.54,
+      "text": "But you said that there's still issue with the chain."
+    },
+    {
+      "start": 1598.54,
+      "end": 1612.54,
+      "text": "No, what I said was the Robinhood earned product is not available in all the 50 states in the US."
+    },
+    {
+      "start": 1612.54,
+      "end": 1620.54,
+      "text": "So New York and Texas are excluded today, but the product is still exposed to over 25 million users."
+    },
+    {
+      "start": 1620.54,
+      "end": 1624.54,
+      "text": "So I don't think that's the largest bottleneck there."
+    },
+    {
+      "start": 1624.54,
+      "end": 1635.54,
+      "text": "However, to that point, you know, a consideration and a point that I want to highlight is stock tokens are available in 120 plus countries today."
+    },
+    {
+      "start": 1635.54,
+      "end": 1641.54,
+      "text": "So that that covers the vast majority of Asia, Europe, but they're not available."
+    },
+    {
+      "start": 1641.54,
+      "end": 1645.54,
+      "text": "They're restricted in the US, Canada, the UK and Switzerland."
+    },
+    {
+      "start": 1645.54,
+      "end": 1650.54,
+      "text": "So we have to we have to abide by the law and be compliant."
+    },
+    {
+      "start": 1650.54,
+      "end": 1652.54,
+      "text": "That is one of our strengths."
+    },
+    {
+      "start": 1652.54,
+      "end": 1659.54,
+      "text": "And sometimes it comes with the fact that we can't be global and ubiquitous on day one."
+    },
+    {
+      "start": 1659.54,
+      "end": 1665.82,
+      "text": "All right, James."
+    },
+    {
+      "start": 1665.82,
+      "end": 1668.82,
+      "text": "You hear me? Yeah."
+    },
+    {
+      "start": 1668.82,
+      "end": 1672.82,
+      "text": "Oh, yeah. Yeah. Thank you so much for the presentation."
+    },
+    {
+      "start": 1672.82,
+      "end": 1681.82,
+      "text": "I just want to ask about the liquidity of stocks on chain because I think right now the liquidity during regular hours are really strong."
+    },
+    {
+      "start": 1681.82,
+      "end": 1691.82,
+      "text": "So I wanted to ask about like non-regular hours and what are your your Robinhood's plans to like increase liquidity for those times?"
+    },
+    {
+      "start": 1691.82,
+      "end": 1693.82,
+      "text": "Yeah. Yeah, we are."
+    },
+    {
+      "start": 1693.82,
+      "end": 1700.82,
+      "text": "So, OK, that's going to be tricky because it's all confidential information that I am not at discretion to share."
+    },
+    {
+      "start": 1700.82,
+      "end": 1703.82,
+      "text": "What I can tell you is we're working on it."
+    },
+    {
+      "start": 1703.82,
+      "end": 1717.82,
+      "text": "And maybe to be more specific is we expect to see really strong improvement in the next, I would say, six to ten weeks."
+    },
+    {
+      "start": 1717.82,
+      "end": 1719.82,
+      "text": "OK, got it. Yeah."
+    },
+    {
+      "start": 1719.82,
+      "end": 1720.82,
+      "text": "Thank you so much. Yeah."
+    },
+    {
+      "start": 1720.82,
+      "end": 1722.82,
+      "text": "It's something that I work work on."
+    },
+    {
+      "start": 1722.82,
+      "end": 1726.82,
+      "text": "So, yeah, thanks so much."
+    },
+    {
+      "start": 1726.82,
+      "end": 1730.2,
+      "text": "David Lee."
+    },
+    {
+      "start": 1730.2,
+      "end": 1733.2,
+      "text": "Hey, Nathan. Nice to meet you again."
+    },
+    {
+      "start": 1733.2,
+      "end": 1734.2,
+      "text": "Great presentation."
+    },
+    {
+      "start": 1734.2,
+      "end": 1738.2,
+      "text": "I want to ask about a distribution side on Robinhood."
+    },
+    {
+      "start": 1738.2,
+      "end": 1741.2,
+      "text": "So our contact is like we do LP."
+    },
+    {
+      "start": 1741.2,
+      "end": 1749.2,
+      "text": "We have a community of people who do LP and we have 500k in IUM with 200k IUM in Robinhood."
+    },
+    {
+      "start": 1750.2,
+      "end": 1760.2,
+      "text": "In the last 30 days, we generated around 300k in revenue from LP fees, which is around 0.2 percent of Uniswap on Robinhood."
+    },
+    {
+      "start": 1760.2,
+      "end": 1771.2,
+      "text": "And I really want to looking for more about distribution and collaborate with other team on Robinhood and how to get feature on Robinhood ecosystem website."
+    },
+    {
+      "start": 1771.2,
+      "end": 1783.2,
+      "text": "Thanks for asking this question, because I think it's relevant for a lot of folks here and projects in general."
+    },
+    {
+      "start": 1784.2,
+      "end": 1801.2,
+      "text": "So we've made a very intentional decision to not retweet or endorse and promote all and every projects that are building on the chain and that reach out to us."
+    },
+    {
+      "start": 1801.2,
+      "end": 1805.2,
+      "text": "And we receive a lot of requests for it every day."
+    },
+    {
+      "start": 1805.2,
+      "end": 1808.2,
+      "text": "There is a couple of reasons for that."
+    },
+    {
+      "start": 1808.2,
+      "end": 1819.2,
+      "text": "The first one, which is not a good one, but it is one, is practically speaking, when you're working at a publicly listed company,."
+    },
+    {
+      "start": 1819.2,
+      "end": 1827.2,
+      "text": "You need a lot of different approvals to get to a point when you can endorse, promote, even for a simple retweet or a simple reply."
+    },
+    {
+      "start": 1827.2,
+      "end": 1835.2,
+      "text": "And that takes a ton of resources and a ton of teams to read, review, understand what the projects is about,."
+    },
+    {
+      "start": 1835.2,
+      "end": 1839.2,
+      "text": "And then finally say, yep, you can retweet, right?"
+    },
+    {
+      "start": 1839.2,
+      "end": 1841.2,
+      "text": "A simple thing like that."
+    },
+    {
+      "start": 1841.2,
+      "end": 1852.2,
+      "text": "That is because we are, again, highly regulated and also a company that takes security and endorsement really, really seriously."
+    },
+    {
+      "start": 1852.2,
+      "end": 1862.2,
+      "text": "And it leads me to the second point, which is every time we do a retweet or put a project on our docs, it is a form of endorsement."
+    },
+    {
+      "start": 1862.2,
+      "end": 1866.2,
+      "text": "And it comes with potential liability."
+    },
+    {
+      "start": 1866.2,
+      "end": 1876.2,
+      "text": "So, you know, ninety nine percent of the projects will retweet and the builders will do everything really perfectly and they will never have a problem."
+    },
+    {
+      "start": 1876.2,
+      "end": 1881.2,
+      "text": "But then there might be one or zero one percent of these projects that do something really stupid."
+    },
+    {
+      "start": 1881.2,
+      "end": 1891.2,
+      "text": "And then that can actually engage the legal liability outside of like the pure branding aspect of it, of Robinhood as a company."
+    },
+    {
+      "start": 1891.2,
+      "end": 1899.2,
+      "text": "And for that reason, our internal teams are extremely sensitive as to who we are able to retweet or not."
+    },
+    {
+      "start": 1899.2,
+      "end": 1905.2,
+      "text": "And unfortunately, the stance is we can't really do that in a much more automated way."
+    },
+    {
+      "start": 1905.2,
+      "end": 1916.2,
+      "text": "So that aspect drives a lot of the decision as to why we're not able to be so supportive of everybody through our social channels."
+    },
+    {
+      "start": 1916.2,
+      "end": 1920.2,
+      "text": "It doesn't mean that we can't support in many different other ways."
+    },
+    {
+      "start": 1920.2,
+      "end": 1932.2,
+      "text": "It doesn't mean we're not excited about everybody building where, you know, all the projects that do things of value and respect, obviously, the law are extremely welcome."
+    },
+    {
+      "start": 1932.2,
+      "end": 1941.2,
+      "text": "And we I and my team try to do our best to support you all in any way that we can outside of that."
+    },
+    {
+      "start": 1941.2,
+      "end": 1948.2,
+      "text": "I hope that makes sense. That's kind of what I can tell you about it."
+    },
+    {
+      "start": 1948.2,
+      "end": 1952.2,
+      "text": "And if you want to reach out again, like, let's see if there is other ways I can I can be helpful."
+    },
+    {
+      "start": 1952.2,
+      "end": 1956.2,
+      "text": "Sabretto, nice to meet you. What's your question?"
+    },
+    {
+      "start": 1956.2,
+      "end": 1964.2,
+      "text": "Yeah, so my question, I think you mentioned that 98 percent of your users are not from Robinhood, that's like external."
+    },
+    {
+      "start": 1965.2,
+      "end": 1984.2,
+      "text": "What I hear is there's any data that you could share about sort of the distribution between sort of crypto native users currently on Robinhood versus sort of non-crypto native users who are sort of on board with Robinhood and what that distribution has looked like over time."
+    },
+    {
+      "start": 1984.2,
+      "end": 1991.2,
+      "text": "And then also what your team's sort of goals are for that, like anything you can share out there."
+    },
+    {
+      "start": 1991.2,
+      "end": 1995.2,
+      "text": "Yeah, let me find something that will be interesting."
+    },
+    {
+      "start": 1995.2,
+      "end": 2006.2,
+      "text": "I mentioned, you know, that the the CEO of and founder of Alchemy had tweeted about it."
+    },
+    {
+      "start": 2006.2,
+      "end": 2011.2,
+      "text": "So here's the tweet. I'll put it in the chat."
+    },
+    {
+      "start": 2012.2,
+      "end": 2025.2,
+      "text": "And so what he was measuring for the first week of September was the number of new teams, the new developers and teams coming on chain, what chain were they interacting with."
+    },
+    {
+      "start": 2025.2,
+      "end": 2030.2,
+      "text": "And yeah, you can see that there was about 40 percent of new teams."
+    },
+    {
+      "start": 2030.2,
+      "end": 2038.2,
+      "text": "So I would qualify them as non-crypto native that came and interacting with the chain."
+    },
+    {
+      "start": 2038.2,
+      "end": 2043.2,
+      "text": "So that's a data that I can share and that I've seen."
+    },
+    {
+      "start": 2043.2,
+      "end": 2055.2,
+      "text": "Outside of that, I don't have like other metrics that I could provide here with confidence that I've been reviewed and approved that could respond to your question."
+    },
+    {
+      "start": 2055.2,
+      "end": 2058.2,
+      "text": "But hopefully that gives a bit of an insight."
+    },
+    {
+      "start": 2058.2,
+      "end": 2060.64,
+      "text": "OK, thank you."
+    },
+    {
+      "start": 2060.64,
+      "end": 2066.64,
+      "text": "Nice. I'm going to go through the other questions in the call."
+    },
+    {
+      "start": 2071.41,
+      "end": 2075.41,
+      "text": "Does Robinhood support NFT project? I would love to launch there."
+    },
+    {
+      "start": 2075.41,
+      "end": 2086.41,
+      "text": "Yeah, I mean, there's there is obviously OpenSea, you know, one of the OG NFT projects that exists as deployed on the chain."
+    },
+    {
+      "start": 2086.41,
+      "end": 2093.41,
+      "text": "There's a lot of gacha who reach out and are interested to deploy as well."
+    },
+    {
+      "start": 2093.41,
+      "end": 2105.41,
+      "text": "We have built an open permissionless public chain for a reason, which is that anybody can build whatever they think is interesting."
+    },
+    {
+      "start": 2105.41,
+      "end": 2117.41,
+      "text": "You know, there's a lot of projects that see tractions and that we see are successful that we did not even contemplated when we, you know, thought about creating that chain."
+    },
+    {
+      "start": 2117.41,
+      "end": 2122.41,
+      "text": "And turns out are really, really interesting for users and bring value."
+    },
+    {
+      "start": 2122.41,
+      "end": 2125.41,
+      "text": "And every time we see that, we're super excited."
+    },
+    {
+      "start": 2125.41,
+      "end": 2133.41,
+      "text": "I think one of the most interesting metrics that I love to look at is what are the fees generated by projects?"
+    },
+    {
+      "start": 2133.41,
+      "end": 2139.41,
+      "text": "Because if projects are generating fees, it means people are ready to pay for it."
+    },
+    {
+      "start": 2139.41,
+      "end": 2143.41,
+      "text": "They think their service and products is valuable."
+    },
+    {
+      "start": 2143.41,
+      "end": 2151.41,
+      "text": "It also means that these projects are doing something right and finding values in building on Robinhood chain."
+    },
+    {
+      "start": 2151.41,
+      "end": 2154.41,
+      "text": "So we have done something right as well."
+    },
+    {
+      "start": 2154.41,
+      "end": 2160.91,
+      "text": "So, you know, we welcome every every project, including obviously NFTs."
+    },
+    {
+      "start": 2160.91,
+      "end": 2165.66,
+      "text": "Adrian, you have your hands up."
+    },
+    {
+      "start": 2165.66,
+      "end": 2169.66,
+      "text": "Salut Gaetan, merci beaucoup."
+    },
+    {
+      "start": 2169.66,
+      "end": 2176.66,
+      "text": "So along those same lines, just as a philosophy, like what is what is Robinhood more interested in?"
+    },
+    {
+      "start": 2176.66,
+      "end": 2177.66,
+      "text": "Pretend you have all the money in the world."
+    },
+    {
+      "start": 2177.66,
+      "end": 2179.66,
+      "text": "You don't need to worry about any of this."
+    },
+    {
+      "start": 2179.66,
+      "end": 2182.66,
+      "text": "Are you more interested in the big finance, the whales?"
+    },
+    {
+      "start": 2182.66,
+      "end": 2188.66,
+      "text": "Are you more interested in getting, you know, the normies on chain, the minnows?"
+    },
+    {
+      "start": 2188.66,
+      "end": 2192.66,
+      "text": "Like what's kind of the philosophy that you guys want?"
+    },
+    {
+      "start": 2192.66,
+      "end": 2193.66,
+      "text": "Does that make sense?"
+    },
+    {
+      "start": 2193.66,
+      "end": 2194.66,
+      "text": "Yeah, it makes sense."
+    },
+    {
+      "start": 2194.66,
+      "end": 2199.66,
+      "text": "And I think you can see a little bit of that answer in the history of the company."
+    },
+    {
+      "start": 2199.66,
+      "end": 2205.66,
+      "text": "Right. Robinhood is by nature a B2C company."
+    },
+    {
+      "start": 2205.66,
+      "end": 2208.66,
+      "text": "Right. We're very retail focused."
+    },
+    {
+      "start": 2208.66,
+      "end": 2211.66,
+      "text": "And I think a lot of the stats are actually public."
+    },
+    {
+      "start": 2211.66,
+      "end": 2219.66,
+      "text": "If you if you go to some of our websites and I think there is actually let me share a link that I'm not sure everybody knows."
+    },
+    {
+      "start": 2219.66,
+      "end": 2229.66,
+      "text": "But we have our investor reports here that if you start digging into it, you'll see a lot of historical data as well."
+    },
+    {
+      "start": 2229.66,
+      "end": 2236.66,
+      "text": "And I'm sharing that because, yeah, you'll see who we've been targeting, who we think is is interesting."
+    },
+    {
+      "start": 2236.66,
+      "end": 2244.66,
+      "text": "And and ultimately who meets most the vision of the company, which is democratized finance for all."
+    },
+    {
+      "start": 2245.66,
+      "end": 2258.66,
+      "text": "Right. Like the idea is not to just cater a few selected few, but to like offer services to to to the as many folks as possible."
+    },
+    {
+      "start": 2258.66,
+      "end": 2262.66,
+      "text": "So hopefully that answers your question."
+    },
+    {
+      "start": 2262.66,
+      "end": 2263.66,
+      "text": "Thank you."
+    },
+    {
+      "start": 2263.66,
+      "end": 2265.66,
+      "text": "Yeah, sure."
+    },
+    {
+      "start": 2265.66,
+      "end": 2268.66,
+      "text": "Romain, you have your hands up again."
+    },
+    {
+      "start": 2268.66,
+      "end": 2279.66,
+      "text": "Me again. Yeah, I was wondering if you had planned to distribute new strategies directly via the app, maybe another lending strategy or oh, yeah."
+    },
+    {
+      "start": 2279.66,
+      "end": 2281.66,
+      "text": "What's the timeline?"
+    },
+    {
+      "start": 2281.66,
+      "end": 2291.66,
+      "text": "I don't think we'll distribute redundant product as in adding a second lending and a third lending and a fourth lending."
+    },
+    {
+      "start": 2291.66,
+      "end": 2297.66,
+      "text": "I think the incremental value for the users will be fairly low if we were to do that."
+    },
+    {
+      "start": 2297.66,
+      "end": 2304.66,
+      "text": "But there are certainly plans to add more interaction straight from the wallet to the chain."
+    },
+    {
+      "start": 2304.66,
+      "end": 2309.66,
+      "text": "I think the key message here is the chain is not a pet project."
+    },
+    {
+      "start": 2309.66,
+      "end": 2313.66,
+      "text": "It's not an experiment that we're going to turn off in six months."
+    },
+    {
+      "start": 2313.66,
+      "end": 2323.66,
+      "text": "This is one of the key strategic pillar of our 10 year strategy as a company."
+    },
+    {
+      "start": 2323.66,
+      "end": 2332.66,
+      "text": "So if you think about 10 years, a 10 year horizon, there's a lot that we're going to do."
+    },
+    {
+      "start": 2332.66,
+      "end": 2334.66,
+      "text": "Obviously, we're all in crypto."
+    },
+    {
+      "start": 2334.66,
+      "end": 2337.66,
+      "text": "We all love the speed of this industry and shipping fast."
+    },
+    {
+      "start": 2337.66,
+      "end": 2338.66,
+      "text": "And we we do that."
+    },
+    {
+      "start": 2338.66,
+      "end": 2340.66,
+      "text": "We try to ship fast."
+    },
+    {
+      "start": 2340.66,
+      "end": 2351.66,
+      "text": "But we're also here for the long term is I think the biggest takeaway I want you all to take is that this is this is going to be a long ride and a long journey."
+    },
+    {
+      "start": 2351.66,
+      "end": 2353.66,
+      "text": "And there's still a lot to do."
+    },
+    {
+      "start": 2353.66,
+      "end": 2361.66,
+      "text": "And having more experiences for 27, 28 million funded accounts in the app is definitely part of it."
+    },
+    {
+      "start": 2361.66,
+      "end": 2374.66,
+      "text": "And second question quickly, legally, are you allowed to distribute more aggressive strategies, more exotic strategies like higher yield?"
+    },
+    {
+      "start": 2374.66,
+      "end": 2381.23,
+      "text": "I think we always try to balance right security with utility."
+    },
+    {
+      "start": 2381.23,
+      "end": 2395.23,
+      "text": "So I don't think the risk profile of extremely volatile and risky strategy is necessarily what we want to put our, you know, recommends to our users first."
+    },
+    {
+      "start": 2395.23,
+      "end": 2403.23,
+      "text": "It's not to say that maybe in the future, you know, we'll have more optionalities for users."
+    },
+    {
+      "start": 2403.23,
+      "end": 2424.23,
+      "text": "But I think if what I'm hearing from your questions and understanding correctly, I think that type of experience and experience is more catered for a non-construal wallet and a user who really owns their phones and take whatever risk they want to take with their money."
+    },
+    {
+      "start": 2424.23,
+      "end": 2435.23,
+      "text": "But probably not something, you know, the licensed brokerage business would, you know, want to promote and endorse and then guide its users to."
+    },
+    {
+      "start": 2435.23,
+      "end": 2439.57,
+      "text": "Merci."
+    },
+    {
+      "start": 2441.23,
+      "end": 2444.23,
+      "text": "Yeah, of course."
+    },
+    {
+      "start": 2444.23,
+      "end": 2454.64,
+      "text": "Okay, Gabriel, Anthony, do you want to do you want to ask your question live?"
+    },
+    {
+      "start": 2454.64,
+      "end": 2455.64,
+      "text": "If not, I will just read it."
+    },
+    {
+      "start": 2455.64,
+      "end": 2460.64,
+      "text": "You said seven day depth is the problem you are heads down on."
+    },
+    {
+      "start": 2460.64,
+      "end": 2469.64,
+      "text": "If a team runs a hedge weekend market in a stock token, would you send flow to it or introduce them to the firms already doing that?"
+    },
+    {
+      "start": 2469.64,
+      "end": 2477.64,
+      "text": "Or is that lane closed to your own liquidity provider?"
+    },
+    {
+      "start": 2477.64,
+      "end": 2488.2,
+      "text": "So the yeah, the seven day the way we want to solve the seven day issue is definitely at the issuer level."
+    },
+    {
+      "start": 2488.2,
+      "end": 2495.2,
+      "text": "Right. So the issuer is what I would call the primary market."
+    },
+    {
+      "start": 2495.2,
+      "end": 2509.2,
+      "text": "That primary market is open to any body or entity who is able to conduct and pass the due diligence of the issuer."
+    },
+    {
+      "start": 2509.2,
+      "end": 2520.2,
+      "text": "So it is not a closed lane to our own liquidity providers to address your question."
+    },
+    {
+      "start": 2520.2,
+      "end": 2528.2,
+      "text": "We've entered in partnership with a very few liquidity provider, less than you can count on one hand."
+    },
+    {
+      "start": 2528.2,
+      "end": 2539.2,
+      "text": "And we have dozens of on board entities who have come and requested to have access to the mint and burn functionalities to be able to access that liquidity."
+    },
+    {
+      "start": 2539.2,
+      "end": 2547.2,
+      "text": "The current problem that exists is to buy a stock token today on the primary market."
+    },
+    {
+      "start": 2547.2,
+      "end": 2549.2,
+      "text": "You need cash."
+    },
+    {
+      "start": 2549.2,
+      "end": 2552.2,
+      "text": "You give cash, you get a stock token."
+    },
+    {
+      "start": 2552.2,
+      "end": 2556.2,
+      "text": "You want to redeem that stock token, you redeem it and you get cash back."
+    },
+    {
+      "start": 2556.2,
+      "end": 2566.2,
+      "text": "What that means is every time there is a mint or burn, you need to be able to buy or sell a stock, the underlying stock."
+    },
+    {
+      "start": 2566.2,
+      "end": 2572.2,
+      "text": "And that buy and sell of the underlying stock can only happen during the week."
+    },
+    {
+      "start": 2572.2,
+      "end": 2574.2,
+      "text": "It doesn't happen 24 seven."
+    },
+    {
+      "start": 2574.2,
+      "end": 2577.2,
+      "text": "That's the main bottleneck that exists today."
+    },
+    {
+      "start": 2577.2,
+      "end": 2587.2,
+      "text": "In a new world, we'll build new functionalities that are confidential and that I cannot really describe too much until they're live."
+    },
+    {
+      "start": 2587.2,
+      "end": 2594.2,
+      "text": "That will allow to operate on a 24 seven market."
+    },
+    {
+      "start": 2594.2,
+      "end": 2604.2,
+      "text": "And again, this will be primarily available to the liquidity providers, the institutions or any entity who are on boarded with the issuer."
+    },
+    {
+      "start": 2604.2,
+      "end": 2612.2,
+      "text": "And these will hopefully increase and really improve the liquidity overnight and during the weekends."
+    },
+    {
+      "start": 2612.2,
+      "end": 2616.86,
+      "text": "Tabassum, you have a question?"
+    },
+    {
+      "start": 2616.86,
+      "end": 2622.24,
+      "text": "Hi, I want to ask a question."
+    },
+    {
+      "start": 2622.24,
+      "end": 2627.24,
+      "text": "Is that I'm really not that familiar with Robinhood chain."
+    },
+    {
+      "start": 2627.24,
+      "end": 2629.24,
+      "text": "So you have Robinhood wallet."
+    },
+    {
+      "start": 2629.24,
+      "end": 2637.24,
+      "text": "I want to ask you that what's the difference between this and the other wallet we already have?"
+    },
+    {
+      "start": 2637.24,
+      "end": 2643.24,
+      "text": "I mean, what significance does it carry?"
+    },
+    {
+      "start": 2643.24,
+      "end": 2647.24,
+      "text": "I don't know if it makes sense as I'm not that familiar with it."
+    },
+    {
+      "start": 2647.24,
+      "end": 2650.24,
+      "text": "Can you please explain?"
+    },
+    {
+      "start": 2650.24,
+      "end": 2657.24,
+      "text": "Is your question what is the difference between Robinhood wallet and other non-custodial wallets that exist?"
+    },
+    {
+      "start": 2657.24,
+      "end": 2659.24,
+      "text": "Yes."
+    },
+    {
+      "start": 2659.24,
+      "end": 2663.24,
+      "text": "So you said the other wallets that you use, which wallet do you use?"
+    },
+    {
+      "start": 2663.24,
+      "end": 2667.32,
+      "text": "Metamask."
+    },
+    {
+      "start": 2667.32,
+      "end": 2668.32,
+      "text": "OK."
+    },
+    {
+      "start": 2668.32,
+      "end": 2669.32,
+      "text": "Yeah."
+    },
+    {
+      "start": 2669.32,
+      "end": 2676.32,
+      "text": "So I mean, the main difference is it's a different company behind it."
+    },
+    {
+      "start": 2676.32,
+      "end": 2679.32,
+      "text": "Robinhood is building Robinhood wallet."
+    },
+    {
+      "start": 2679.32,
+      "end": 2685.32,
+      "text": "Metamask is part of consensus and they've built their own wallet."
+    },
+    {
+      "start": 2685.32,
+      "end": 2693.32,
+      "text": "As I mentioned, and by the way, we partner and we're partnering with a lot of different non-custodial wallets."
+    },
+    {
+      "start": 2693.32,
+      "end": 2704.32,
+      "text": "There are co-marketing campaigns that are soon to be released and rolled out and that you might see publicly."
+    },
+    {
+      "start": 2704.32,
+      "end": 2712.32,
+      "text": "So we're very cooperative with all the other non-custodial wallets in the space."
+    },
+    {
+      "start": 2712.32,
+      "end": 2719.32,
+      "text": "We don't see that as conflicting at all with the Robinhood wallet and vice versa."
+    },
+    {
+      "start": 2719.32,
+      "end": 2724.32,
+      "text": "I don't think they see that as conflicting with their own interests today."
+    },
+    {
+      "start": 2724.32,
+      "end": 2734.32,
+      "text": "But the way you can think about Robinhood wallet is the type of experiences that we want to try to offer to our users through a non-custodial wallet."
+    },
+    {
+      "start": 2734.32,
+      "end": 2742.32,
+      "text": "And as I mentioned, we built it and we continue investing in it because we can control that surface."
+    },
+    {
+      "start": 2742.32,
+      "end": 2744.32,
+      "text": "We can control that product."
+    },
+    {
+      "start": 2744.32,
+      "end": 2752.32,
+      "text": "If we were to decide, OK, we're going to partner with a third-party wallet, we would have much less control over the roadmap."
+    },
+    {
+      "start": 2752.32,
+      "end": 2761.32,
+      "text": "And so that's something that's always a bit difficult to manage when you want to move fast in this industry."
+    },
+    {
+      "start": 2761.32,
+      "end": 2763.32,
+      "text": "Thank you."
+    },
+    {
+      "start": 2763.32,
+      "end": 2766.32,
+      "text": "Awesome."
+    },
+    {
+      "start": 2766.32,
+      "end": 2767.32,
+      "text": "I want to be mindful."
+    },
+    {
+      "start": 2767.32,
+      "end": 2769.32,
+      "text": "Yeah, I think I'm about time."
+    },
+    {
+      "start": 2769.32,
+      "end": 2775.56,
+      "text": "So maybe one last question, Gabriel, and then I'm going to have to."
+    },
+    {
+      "start": 2775.56,
+      "end": 2777.56,
+      "text": "Am I audible?"
+    },
+    {
+      "start": 2777.56,
+      "end": 2778.56,
+      "text": "Hello."
+    },
+    {
+      "start": 2778.56,
+      "end": 2779.56,
+      "text": "Can you repeat, please?"
+    },
+    {
+      "start": 2779.56,
+      "end": 2781.56,
+      "text": "Yeah, am I audible?"
+    },
+    {
+      "start": 2781.56,
+      "end": 2782.56,
+      "text": "Yes."
+    },
+    {
+      "start": 2782.56,
+      "end": 2783.56,
+      "text": "Yeah, sorry."
+    },
+    {
+      "start": 2783.56,
+      "end": 2784.56,
+      "text": "I'm sorry."
+    },
+    {
+      "start": 2784.56,
+      "end": 2788.56,
+      "text": "I was in a loud place earlier, so I was not able to turn on my mic."
+    },
+    {
+      "start": 2788.56,
+      "end": 2799.56,
+      "text": "Another question that I have is, can a tokenized stock be accepted as a collateral in DeFi when the stock market is closed?"
+    },
+    {
+      "start": 2799.56,
+      "end": 2807.56,
+      "text": "So let's say when the stock market is closed, would we still be able to run a DeFi pair?"
+    },
+    {
+      "start": 2807.56,
+      "end": 2812.56,
+      "text": "Like, for example, would Robinhood cooperate on designing the risk parameters?"
+    },
+    {
+      "start": 2812.56,
+      "end": 2820.56,
+      "text": "Or is there any fundamental legal or structural problem behind this setup?"
+    },
+    {
+      "start": 2820.56,
+      "end": 2823.56,
+      "text": "Sorry, I'm going to try to rephrase your question, make sure I understand."
+    },
+    {
+      "start": 2823.56,
+      "end": 2829.56,
+      "text": "Are you asking, can you trade stock tokens 24-7 on-chain?"
+    },
+    {
+      "start": 2829.56,
+      "end": 2836.56,
+      "text": "No, it's like trying to make the tokenized stock as a collateral for any DeFi asset."
+    },
+    {
+      "start": 2837.56,
+      "end": 2838.56,
+      "text": "OK."
+    },
+    {
+      "start": 2838.56,
+      "end": 2845.56,
+      "text": "So is it possible to run it without any legal problems when the stock market is down?"
+    },
+    {
+      "start": 2845.56,
+      "end": 2851.56,
+      "text": "Because when the stock market is not live, like for the real stock market, it's not running on weekends, right?"
+    },
+    {
+      "start": 2851.56,
+      "end": 2857.56,
+      "text": "During that time, would there be any legal problems because at that particular time, the tokenized asset is not moving, right?"
+    },
+    {
+      "start": 2857.56,
+      "end": 2866.56,
+      "text": "For example, the risk parameters will be a bit tricky here because when the price of the collateral is frozen,."
+    },
+    {
+      "start": 2866.56,
+      "end": 2875.56,
+      "text": "And let's say the actual value of the asset is changing, but the collateral value is frozen,."
+    },
+    {
+      "start": 2875.56,
+      "end": 2880.56,
+      "text": "Would there be any risk problems or any legal problems when designing a system like that?"
+    },
+    {
+      "start": 2880.56,
+      "end": 2883.56,
+      "text": "Gabriel, I think I'm going to stop you here."
+    },
+    {
+      "start": 2883.56,
+      "end": 2885.56,
+      "text": "Two reasons."
+    },
+    {
+      "start": 2885.56,
+      "end": 2889.56,
+      "text": "One, I don't know your product, so it's hard for me to tell you anything about it."
+    },
+    {
+      "start": 2889.56,
+      "end": 2897.56,
+      "text": "And secondly, I am forbidden from providing any kind of legal and compliance advice because I'm not a lawyer."
+    },
+    {
+      "start": 2897.56,
+      "end": 2903.56,
+      "text": "So I'm not able to respond to your question, unfortunately."
+    },
+    {
+      "start": 2903.56,
+      "end": 2912.56,
+      "text": "But what I would say is, please refer to the documentation that exists on stock tokens if you use stock tokens."
+    },
+    {
+      "start": 2912.56,
+      "end": 2919.56,
+      "text": "We've laid out a lot of the guidance in terms of how you should and could use it there,."
+    },
+    {
+      "start": 2919.56,
+      "end": 2927.56,
+      "text": "As well as listed all the prospectus for every underlying stock that is available."
+    },
+    {
+      "start": 2927.56,
+      "end": 2935.56,
+      "text": "This is probably the best source you can get when it comes to legal interpretation and recommendation."
+    },
+    {
+      "start": 2935.56,
+      "end": 2939.56,
+      "text": "Cool. Benjamin, I'll turn it back to you."
+    },
+    {
+      "start": 2939.56,
+      "end": 2946.56,
+      "text": "Sure. Thank you so much for giving the presentation and, of course, answering all the questions."
+    },
+    {
+      "start": 2946.56,
+      "end": 2950.56,
+      "text": "I think today's topic definitely sparked a lot of interest."
+    },
+    {
+      "start": 2950.56,
+      "end": 2955.56,
+      "text": "If you guys have any more questions, feel free to drop it in the Telegram chat."
+    },
+    {
+      "start": 2955.56,
+      "end": 2962.56,
+      "text": "I believe Swag and the other teammates from the Foundation will help coordinate it with you."
+    },
+    {
+      "start": 2962.56,
+      "end": 2967.56,
+      "text": "Lastly, I just want to give a huge thank you to Gaetan as well for taking the time to join us today."
+    },
+    {
+      "start": 2967.56,
+      "end": 2975.56,
+      "text": "And sharing more about Robinhood Chain and, of course, the collaboration with the Foundation on the whole Open House program."
+    },
+    {
+      "start": 2975.56,
+      "end": 2983.56,
+      "text": "For those who are still interested in building, don't forget that the applications to the Open House Singapore are still currently open."
+    },
+    {
+      "start": 2983.56,
+      "end": 2989.56,
+      "text": "Feel free to apply or share it, spread the word to everyone that the Buildathon is still ongoing."
+    },
+    {
+      "start": 2989.56,
+      "end": 2994.56,
+      "text": "And everyone can join us before it ends on the 4th of October."
+    },
+    {
+      "start": 2994.56,
+      "end": 2998.56,
+      "text": "The top teams will also be able to join us at Founder House Singapore,."
+    },
+    {
+      "start": 2998.56,
+      "end": 3006.56,
+      "text": "Which will happen on October 23rd and 25th, which we are also hosting in collaboration with Robinhood Chain."
+    },
+    {
+      "start": 3006.56,
+      "end": 3012.56,
+      "text": "We really hope today's session gave you a better understanding on Robinhood Chain and the opportunities that you can build."
+    },
+    {
+      "start": 3012.56,
+      "end": 3018.56,
+      "text": "And, of course, hopefully it inspired some ideas for what you might build in the Buildathon."
+    },
+    {
+      "start": 3018.56,
+      "end": 3025.56,
+      "text": "Once again, thank you everyone. Have a great day and we look forward to seeing what you create."
+    },
+    {
+      "start": 3026.56,
+      "end": 3029.56,
+      "text": "Thank you all. Cheers. Have a good one. Bye."
+    }
+  ]
+}

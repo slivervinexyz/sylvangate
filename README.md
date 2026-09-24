@@ -55,6 +55,30 @@ pnpm tsx scripts/execute-smart-route-live-demo.ts
 pnpm tsx scripts/execute-robinhood-inbound-treasury-probe.ts
 ```
 
+## Complement — Retail DEX Guard (4663, decision-only)
+
+ExoMesh soil reflex (`checkSoilResistance` / `evaluateCoreSoilSlippage`) can gate high-volatility launchpad swaps (e.g. Pons) **before wallet sign** — 0-Gas fail-closed on slippage/depth trip.
+
+- Modules: `src/core/risk-engine-soil.ts` · `src/core/soil-wasm-runtime.ts` · `src/core/risk-severance.ts`
+- Honeypot modeled via slippage + depth trip — **not** a literal `sellTax` calldata parser
+- **Not** part of `pnpm demo:robinhood-sentinel` hero paths
+- **Not** EIP-1193 wallet middleware in this SKU slice (`exomesh-agentic-wallet-guard` source not shipped here)
+
+## Complement — Treasury Escort & Audit Terminal (4663, decision-only)
+
+Verifiable capital-safety feed for Robinhood Chain traders — maps audit snapshot + treasury escort quote to Hyperdash-class **risk terminal lines** (formatting only; no UI shipped).
+
+- `buildRobinhoodAuditSnapshot()` — dual probe: inbound `42161→4663` must fail with `AML_INBOUND_TO_ROBINHOOD_BLOCKED`; outbound `4663→42161` enforces `lostUsd ≡ 0`; emits canonical JSON + `sha256Signature` (live-fire **B2**: `c9896689…520bd9bb`)
+- `quoteRChainYieldToArbitrumGm()` — treasury yield escort quote via `assertUnidirectionalBridge`; `contractDeployed: false` · `decisionReady: true`
+- Example feed line: `[HYPERDASH-RISK-FEED] chain=4663 | Inbound Airlock ACTIVE | In-Flight $100 | lostUsd=0 | SHA256 Cert: c989668...`
+- Live-fire: [B1 airlock](./docs/logging/robinhood_livefire_inbound_block_2026-09-21T01-54-27-239380566Z.json) · [B2 audit](./docs/logging/robinhood_livefire_inbound_audit_2026-09-21T02-09-39-263Z.json) · [A-Tier2-mainnet](./docs/logging/robinhood_livefire_outbound_2026-09-21T03-00-51-080Z.json) (`bridgeDeployed: false`)
+- **Not** Hyperdash integration · **not** websocket feed · **not** wallet middleware
+- Primary SKU remains Kernel Escort + Airlock + Audit Certificate (`pnpm demo:robinhood-sentinel`)
+
+## Architecture & Honesty Boundaries
+
+For a detailed technical breakdown of our 4663 → 42161 cross-chain intent attestation and contract deployment status, see [docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md](docs/CROSS_CHAIN_ARCHITECTURE_FAQ.md).
+
 ## Honest footnotes
 
 - **A-Tier2-mainnet** uses stub attestation · `bridgeDeployed: false` · **not** a production cross-chain bridge buffer
