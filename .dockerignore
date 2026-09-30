@@ -1,0 +1,30 @@
+# Docker build context — keep lean; never ship secrets or host artifacts
+.env
+.env.*
+!.env.example
+.env.local
+.env.production
+.dev.vars
+*.pem
+*.key
+id_rsa*
+*.p12
+*.pfx
+wallet.json
+**/private-keys/
+
+# Dependencies & build outputs (rebuilt inside image)
+node_modules
+dist
+coverage
+
+# VCS & IDE (prevents Cursor/pipe IO errors during docker build)
+.git
+.cursor
+.cursorignore
+.cursorrules
+
+# Cloudflare / tooling caches
+.wrangler/
+.specstory/
+*.log

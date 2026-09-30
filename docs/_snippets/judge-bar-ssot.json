@@ -1,0 +1,7 @@
+{
+  "testFiles": 14,
+  "testCount": 57,
+  "testCommand": "pnpm test",
+  "demoCommand": "pnpm demo:robinhood-sentinel",
+  "adversarialSubsetNote": "PR-A+PR-B adversarial subset locked (venue-drift, signing-severance, sdk-export-surface, intent-mandate-adversarial, sylvangate-toxic-corpus)"
+}

@@ -1,0 +1,3 @@
+[submodule "Slivervine-gateFoundry/lib/forge-std"]
+	path = Slivervine-gateFoundry/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

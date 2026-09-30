@@ -1,0 +1,34 @@
+# BUSL-1.1 (Business Source License 1.1) · Copyright (c) 2026 SilverVine Labs
+# SliverVine Sanctuary Telemetry Sidecar — v0.8-preview
+# Build: docker build -f docker/Dockerfile.sidecar -t silvervine-sidecar .
+# Run:   docker run -d -p 8080:8080 silvervine-sidecar
+
+FROM node:22-alpine AS runtime
+
+LABEL org.opencontainers.image.title="silvervine-sidecar" \
+      org.opencontainers.image.version="v0.8-preview" \
+      org.opencontainers.image.description="Sanctuary telemetry sidecar daemon" \
+      org.opencontainers.image.licenses="BUSL-1.1"
+
+WORKDIR /app
+
+RUN apk add --no-cache wget \
+  && addgroup -S sidecar \
+  && adduser -S sidecar -G sidecar
+
+COPY docker/sidecar-daemon.mjs ./sidecar-daemon.mjs
+
+ENV NODE_ENV=production \
+    SIDECAR_PORT=8080 \
+    SIDECAR_POLL_MS=2000 \
+    SIDECAR_DECISION_SLO_MS=500 \
+    TELEMETRY_UPSTREAM=https://bedeltawater.slivervine.xyz/api/telemetry/health
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s \
+  CMD wget -qO- http://127.0.0.1:8080/health || exit 1
+
+USER sidecar
+
+CMD ["node", "sidecar-daemon.mjs"]

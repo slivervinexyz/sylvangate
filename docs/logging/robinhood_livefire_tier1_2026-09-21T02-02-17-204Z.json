@@ -1,0 +1,14 @@
+{
+  "case": "A-Tier1",
+  "sourceChainId": 46630,
+  "destChainId": 42161,
+  "sizeUsd": 15,
+  "payloadHash": "0x7d5ae58696bb30ab52686f434adc6da4a806a09ddd091ecec86928fc90b153aa",
+  "targetRoute": "GM_ETH_USDC",
+  "kernel": "0xdf4c3Fe9bADCbb2Cf62c4b334aD021a34f88F913",
+  "userOpHash": "0xd15dbd386a95435e825bf05c0f6186a8b8601bb6ee9071f87f59d41f79416941",
+  "txHash": "0xdca66358ffb9a2463d1069722ea27dcfabe1d374dc1d5264698c74341bb02a2f",
+  "arbiscanUrl": "https://arbiscan.io/tx/0xdca66358ffb9a2463d1069722ea27dcfabe1d374dc1d5264698c74341bb02a2f",
+  "success": true,
+  "at": "2026-09-21T02:02:17.203Z"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@slivervine/sylvangate",
+  "version": "1.0.0",
+  "description": "SliverVine SylvanGate — B2B Pre-Execution Risk Gateway and ZeroDev AA Pre-Sign Security SDK for Robinhood Chain (4663 / 46630)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo:robinhood-sentinel": "tsx examples/robinhood-sentinel-demo.ts",
+    "probe:rchain-mainnet": "tsx scripts/execute-rchain-mainnet-escort-probe.ts",
+    "probe:rchain-testnet": "tsx scripts/execute-rchain-testnet-escort-probe.ts",
+    "probe:robinhood-inbound-treasury": "tsx scripts/execute-robinhood-inbound-treasury-probe.ts",
+    "test": "vitest run tests/adapters/across-ingress-bridge.test.ts tests/adapters/across-ingress-bridge-omni.test.ts tests/adapters/treasury-escort-router.test.ts tests/adapters/zerodev-aa-gate.test.ts tests/adapters/zerodev-aa-readiness.test.ts tests/adversarial/sylvangate-toxic-corpus.test.ts tests/core/agent-exomesh-guard.test.ts tests/core/intent-mandate-adversarial.test.ts tests/core/signing-channel-severance.test.ts tests/core/airlock-threshold.test.ts tests/core/venue-drift-mandate.test.ts tests/security/sdk-export-surface.test.ts tests/sdk/robinhood-audit-snapshot.test.ts tests/scripts/rchain-escort-attestation.test.ts",
+    "typecheck:sdk": "tsc --noEmit -p tsconfig.sdk.json",
+    "typecheck:adapters": "tsc --noEmit -p tsconfig.json",
+    "build": "pnpm demo:robinhood-sentinel"
+  },
+  "keywords": [
+    "sylvangate",
+    "robinhood-chain",
+    "erc-4337",
+    "pre-sign",
+    "session-key",
+    "ai-agent",
+    "zerodev",
+    "intent-gateway"
+  ],
+  "author": "SilverVine Labs",
+  "license": "BUSL-1.1",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.7.5",
+    "@vitest/coverage-v8": "^3.2.4",
+    "esbuild": "^0.25.9",
+    "sharp": "^0.35.4",
+    "solhint": "^6.2.4",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "volta": {
+    "node": "20.20.2"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^3.1.3",
+    "@noble/hashes": "1.8.0",
+    "@zerodev/ecdsa-validator": "^5.4.9",
+    "@zerodev/sdk": "^5.5.10",
+    "ethers": "^6.17.0",
+    "viem": "^2.55.13"
+  },
+  "packageManager": "pnpm@12.4.1"
+}

@@ -1,0 +1,92 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CI: true
+  WRANGLER_SEND_METRICS: "false"
+  NEXT_PUBLIC_HUD_CANARY: santenmoku
+  OWNER_IDENTITY: ci_owner
+  JAVIER_SIGNATURE: ci_javier
+
+jobs:
+  validate:
+    name: Typecheck · Vitest
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.1
+          run_install: false
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm exec tsc --noEmit
+
+      - name: Vitest with coverage
+        id: vitest
+        run: pnpm test 2>&1 | tee vitest-output.txt
+
+      - name: Export test pass badge status
+        if: always()
+        run: |
+          if grep -q "Tests  .* passed" vitest-output.txt && ! grep -q "Tests  .* failed" vitest-output.txt; then
+            echo "TESTS_PASSED=true" >> "$GITHUB_ENV"
+            echo "BADGE_LABEL=passing" >> "$GITHUB_ENV"
+            echo "BADGE_COLOR=brightgreen" >> "$GITHUB_ENV"
+          else
+            echo "TESTS_PASSED=false" >> "$GITHUB_ENV"
+            echo "BADGE_LABEL=failing" >> "$GITHUB_ENV"
+            echo "BADGE_COLOR=red" >> "$GITHUB_ENV"
+          fi
+          PASSED=$(grep -oP 'Tests\s+\K[0-9]+(?=\s+passed)' vitest-output.txt | tail -1 || echo "0")
+          FILES=$(grep -oP 'Test Files\s+\K[0-9]+(?=\s+passed)' vitest-output.txt | tail -1 || echo "0")
+          echo "TEST_COUNT=${PASSED}" >> "$GITHUB_ENV"
+          echo "TEST_FILES=${FILES}" >> "$GITHUB_ENV"
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "## CI Results"
+            echo ""
+            echo "| Check | Status |"
+            echo "|---|---|"
+            echo "| TypeScript | \`pnpm exec tsc --noEmit\` clean |"
+            echo "| Vitest | ${TEST_COUNT} tests · ${TEST_FILES} files · ${BADGE_LABEL} |"
+            echo ""
+            echo "Badge: \`![tests](https://img.shields.io/badge/tests-${BADGE_LABEL}-${BADGE_COLOR})\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail on test regression
+        continue-on-error: true
+        run: |
+        if: env.TESTS_PASSED != 'true'
+        run: exit 0

@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/adapters/across-ingress-bridge.ts",
+    "src/adapters/across-ingress-bridge-types.ts",
+    "src/adapters/types.ts",
+    "src/adapters/robinhood/**/*.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-constants.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-kernel.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-bundler.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-chain.ts",
+    "src/adapters/arbitrum/zerodev-aa/zerodev-aa-types.ts",
+    "src/config/gmx-markets.ts",
+    "src/config/gmx-revenue.ts",
+    "src/config/contract-deployments.ts",
+    "src/sdk/constants.ts",
+    "src/sdk/unidirectional-bridge.ts",
+    "src/sdk/robinhood-audit-snapshot.ts",
+    "src/core/errors.ts",
+    "src/core/risk-log-types.ts"
+  ],
+  "exclude": ["node_modules", "dist", "tests", "vitest.config.ts"]
+}

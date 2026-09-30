@@ -1,0 +1,135 @@
+[
+  {
+    "id": "rh-toxic-01",
+    "entry": "guardAgentUserOp",
+    "input": {
+      "intent": { "maxSlippageBps": 5, "airlockThresholdBps": 5, "targetMarket": "USDG" },
+      "airlock": {
+        "symbol": "USDG",
+        "hlSpot": 100,
+        "hlPerp": 120,
+        "dydxPerp": 80,
+        "depthUsd": 1000,
+        "at": "2026-09-12T06:00:00.000Z"
+      },
+      "atMs": 1726120800000
+    },
+    "expect": { "allowed": false }
+  },
+  {
+    "id": "rh-toxic-02",
+    "entry": "checkAirlockThreshold",
+    "input": {
+      "symbol": "ETH-PERP",
+      "hlSpot": 3500,
+      "hlPerp": 3600,
+      "dydxPerp": 3400,
+      "depthUsd": 50,
+      "maxSlippage": 0.01,
+      "at": "2026-09-12T06:00:00.000Z"
+    },
+    "expect": { "tripped": true }
+  },
+  {
+    "id": "rh-toxic-03",
+    "entry": "evaluateGatewayRules",
+    "input": {
+      "symbol": "ETH",
+      "payloadPoison": true,
+      "airlock": {
+        "symbol": "ETH",
+        "hlSpot": 3500,
+        "hlPerp": 3500,
+        "dydxPerp": 3500,
+        "depthUsd": 200000,
+        "at": "2026-09-12T06:00:00.000Z"
+      }
+    },
+    "expect": { "failClosed": true }
+  },
+  {
+    "id": "rh-toxic-04",
+    "entry": "validateAcrossBridgeDirection",
+    "input": { "sourceChainId": 42161, "destChainId": 4663 },
+    "expect": { "inboundBlocked": true }
+  },
+  {
+    "id": "rh-toxic-05",
+    "entry": "validateAcrossBridgeDirection",
+    "input": { "sourceChainId": 4663, "destChainId": 10 },
+    "expect": { "reasonIncludes": "BRIDGE_ROUTE_UNSUPPORTED" }
+  },
+  {
+    "id": "rh-toxic-06",
+    "entry": "checkAirlockThreshold",
+    "input": {
+      "chainId": 4663,
+      "symbol": "PONS",
+      "allowedVenues": ["uniswap_v4", "pons_launchpad", "usd_vault"],
+      "targetVenue": "unauthorized_hook_dex",
+      "hlSpot": 1,
+      "hlPerp": 1,
+      "dydxPerp": 1,
+      "depthUsd": 200000,
+      "at": "2026-09-12T06:00:00.000Z"
+    },
+    "expect": { "reasonIncludes": "VENUE_DRIFT_REJECTED" }
+  },
+  {
+    "id": "rh-toxic-07",
+    "entry": "evaluateBridgeTimeout",
+    "input": { "initiatedAtMs": 1700000000000, "nowMs": 1700007200001 },
+    "expect": { "failClosed": true }
+  },
+  {
+    "id": "rh-toxic-08",
+    "entry": "quoteRChainYieldToArbitrumGm",
+    "input": {
+      "assetKind": "rwa",
+      "symbol": "X",
+      "amountUsd": 100,
+      "wallet": "0xcccccccccccccccccccccccccccccccccccccccc",
+      "sourceChainId": 99999,
+      "initiatedAtMs": 1700000000000,
+      "nowMs": 1700000000000
+    },
+    "expect": { "ok": false, "bridgeEscortOk": false }
+  },
+  {
+    "id": "rh-toxic-09",
+    "entry": "evaluateAgentExoMeshGuard",
+    "input": {
+      "intent": { "maxSlippageBps": 10, "airlockThresholdBps": 10, "targetMarket": "ETH-PERP" },
+      "airlock": {
+        "symbol": "ETH-PERP",
+        "hlSpot": 3500,
+        "hlPerp": 3600,
+        "dydxPerp": 3400,
+        "depthUsd": 50000,
+        "at": "2026-09-12T06:00:00.000Z"
+      },
+      "atMs": 1726120800000
+    },
+    "expect": { "deadmanTriggered": true }
+  },
+  {
+    "id": "rh-toxic-10",
+    "entry": "guardAgentUserOp",
+    "input": {
+      "intent": { "maxSlippageBps": 50, "airlockThresholdBps": 50, "targetMarket": "USDG" },
+      "airlock": {
+        "symbol": "USDG",
+        "chainId": 4663,
+        "venueKey": "usd_vault",
+        "allowedVenues": ["uniswap_v4", "pons_launchpad", "usd_vault"],
+        "hlSpot": 1,
+        "hlPerp": 1,
+        "dydxPerp": 1,
+        "depthUsd": 200000,
+        "at": "2026-09-12T06:00:00.000Z"
+      },
+      "atMs": 1726120800000
+    },
+    "expect": { "allowed": true }
+  }
+]

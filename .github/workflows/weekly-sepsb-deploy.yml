@@ -1,0 +1,70 @@
+name: Weekly SEPSB Benchmark & Deploy
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-sepsb-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  CI: true
+  WRANGLER_SEND_METRICS: "false"
+
+jobs:
+  sepsb-benchmark:
+    name: SEPSB Benchmark · Commit · Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.4.1
+          run_install: false
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run SEPSB benchmark
+        run: pnpm audit:sepsb
+
+      - name: Commit SEPSB audit artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/audit/SEPSB_BENCHMARK_SSOT.json docs/audit/SEPSB_CORPUS_SNAPSHOT.json docs/audit/sepsb-stress-telemetry.csv docs/audit/SYSTEM_METRICS_SSOT.json
+          if git diff --staged --quiet; then
+            echo "No SEPSB artifact changes to commit."
+          else
+            git commit -m "chore(sepsb): weekly benchmark SSOT & corpus snapshot [skip ci]"
+            git push
+          fi
+
+      - name: Build assets
+        run: pnpm run build:assets
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --minify
